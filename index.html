@@ -149,7 +149,7 @@
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, name: name, lang: langPref, website: website })
+        body: JSON.stringify({ email: email, name: name, lang: langPref, website: website, newsletter: 'ai-data-daily' })
       }).then(function() {
         msg.className = 'subscribe-msg success';
         msg.textContent = uiLang === 'is' ? '✅ Skráning tókst! Þú færð fyrstu útgáfuna bráðlega.' : "✅ Subscribed! You'll receive the next edition.";

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Data Daily — Dagleg samantekt</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    h1 { color: #58a6ff; font-size: 1.6rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+    .brand { color: #4493f8; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .title-row h1 { margin: 0; flex: 1; min-width: 200px; }
+    .coffee-button { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0; color: #f59e0b; font-size: 0.9rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .coffee-button:hover { color: #fbbf24; }
+    .subtitle { color: #8b949e; font-size: 0.95rem; margin: 0.5rem 0 2rem; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .edition-list { list-style: none; padding: 0; }
+    .edition-list li { padding: 0.75rem 0; border-bottom: 1px solid #21262d; }
+    .edition-list li:last-child { border-bottom: none; }
+    .edition-date { color: #e6edf3; font-weight: 600; }
+    .edition-lang { color: #8b949e; font-size: 0.85rem; margin-left: 0.5rem; }
+    .lang-toggle { display: flex; gap: 0.5rem; margin: 1rem 0; }
+    .lang-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; text-decoration: none; }
+    .lang-btn:hover { background: #30363d; text-decoration: none; }
+    .lang-btn.active { background: #1f6feb; border-color: #58a6ff; color: #fff; }
+    .subscribe-box { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+    .subscribe-box h3 { color: #58a6ff; margin: 0 0 0.5rem; }
+    .subscribe-box p { color: #8b949e; margin: 0 0 1rem; font-size: 0.9rem; }
+    .subscribe-btn { display: inline-block; background: #238636; color: #fff; padding: 8px 24px; border-radius: 6px; font-size: 0.95rem; font-weight: 600; text-decoration: none; }
+    .subscribe-btn:hover { background: #2ea043; text-decoration: none; }
+    footer { color: #484f58; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #30363d; padding-top: 1rem; }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+  <p class="brand">AI Data Daily</p>
+  <div class="title-row">
+    <h1>🔷 <span data-lang="is" class="visible">Dagleg samantekt</span><span data-lang="en">Daily Digest</span></h1>
+    <a class="coffee-button" href="https://ko-fi.com/at0micnews">☕ <span data-lang="is" class="visible">Styrkja</span><span data-lang="en">Buy me a coffee</span></a>
+  </div>
+  <p class="subtitle">
+    <span data-lang="is" class="visible">Microsoft Fabric · Azure AI Foundry · Databricks · Gagnavísindi & gervigreind</span>
+    <span data-lang="en">Microsoft Fabric · Azure AI Foundry · Databricks · Data Science & AI</span>
+  </p>
+
+  <div class="lang-toggle">
+    <a class="lang-btn active" onclick="setLang('is')" id="btn-is">🇮🇸 Íslenska</a>
+    <a class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 English</a>
+  </div>
+
+  <div class="subscribe-box">
+    <h3><span data-lang="is" class="visible">📬 Fáðu dagblað í tölvupósti</span><span data-lang="en">📬 Get the daily digest by email</span></h3>
+    <p><span data-lang="is" class="visible">Skráðu þig og fáðu AI Data Daily beint í pósthólfið á hverjum morgni.</span><span data-lang="en">Subscribe and get AI Data Daily delivered to your inbox every morning.</span></p>
+    <a class="subscribe-btn" href="SUBSCRIBE_FORM_URL"><span data-lang="is" class="visible">Gerast áskrifandi</span><span data-lang="en">Subscribe</span></a>
+  </div>
+
+  <h2><span data-lang="is" class="visible">Útgáfur</span><span data-lang="en">Editions</span></h2>
+
+  <ul class="edition-list">
+    <!-- EDITIONS_PLACEHOLDER -->
+    <li><em data-lang="is" class="visible">Engin útgáfa enn — fyrsta útgáfan kemur bráðlega!</em><em data-lang="en">No editions yet — first edition coming soon!</em></li>
+  </ul>
+
+  <footer>
+    <p>AI Data Daily · <a href="https://ko-fi.com/at0micnews">☕ Ko-fi</a> · Powered by At0mic</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+      });
+      document.getElementById('btn-is').classList.toggle('active', lang === 'is');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      localStorage.setItem('ai-data-daily-lang', lang);
+    }
+    // Restore saved language preference
+    const saved = localStorage.getItem('ai-data-daily-lang');
+    if (saved) setLang(saved);
+  </script>
+</body>
+</html>

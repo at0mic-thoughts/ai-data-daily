@@ -52,57 +52,64 @@
     .lang-pref input[type="radio"] { accent-color: #58a6ff; }
 
     footer { color: #484f58; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #30363d; padding-top: 1rem; }
-    [data-lang] { display: none; }
-    [data-lang].visible { display: block; }
-    span[data-lang] { display: none; }
-    span[data-lang].visible { display: inline; }
-    em[data-lang] { display: none; }
-    em[data-lang].visible { display: inline; }
+
+    /* Language toggling — block elements */
+    .i18n { display: none; }
+    .i18n.visible { display: block; }
+    /* Inline language toggling */
+    .i18n-inline { display: none; }
+    .i18n-inline.visible { display: inline; }
   </style>
 </head>
 <body>
   <p class="brand">AI Data Daily</p>
   <div class="title-row">
-    <h1>🔷 <span data-lang="is" class="visible">Dagleg samantekt</span><span data-lang="en">Daily Digest</span></h1>
-    <a class="coffee-button" href="https://ko-fi.com/at0micnews">☕ <span data-lang="is" class="visible">Styrkja</span><span data-lang="en">Buy me a coffee</span></a>
+    <h1>🔷 <span class="i18n-inline visible" data-lang="is">Dagleg samantekt</span><span class="i18n-inline" data-lang="en">Daily Digest</span></h1>
+    <a class="coffee-button" href="https://ko-fi.com/at0micnews">☕ <span class="i18n-inline visible" data-lang="is">Styrkja</span><span class="i18n-inline" data-lang="en">Buy me a coffee</span></a>
   </div>
   <p class="subtitle">
-    <span data-lang="is" class="visible">Microsoft Fabric · Azure AI Foundry · Databricks · Gagnavísindi & gervigreind</span>
-    <span data-lang="en">Microsoft Fabric · Azure AI Foundry · Databricks · Data Science & AI</span>
+    <span class="i18n-inline visible" data-lang="is">Microsoft Fabric · Azure AI Foundry · Databricks · Gagnavísindi &amp; gervigreind</span>
+    <span class="i18n-inline" data-lang="en">Microsoft Fabric · Azure AI Foundry · Databricks · Data Science &amp; AI</span>
   </p>
 
   <div class="lang-toggle">
-    <a class="lang-btn active" onclick="setLang('is')" id="btn-is">🇮🇸 Íslenska</a>
-    <a class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 English</a>
+    <a class="lang-btn active" onclick="setLang('is')" id="btn-is">&#x1F1EE;&#x1F1F8; Íslenska</a>
+    <a class="lang-btn" onclick="setLang('en')" id="btn-en">&#x1F1EC;&#x1F1E7; English</a>
   </div>
 
-  <!-- Subscribe Form -->
+  <h2><span class="i18n-inline visible" data-lang="is">Útgáfur</span><span class="i18n-inline" data-lang="en">Editions</span></h2>
+
+  <ul class="edition-list">
+    <!-- EDITIONS_PLACEHOLDER -->
+    <li>
+      <em class="i18n-inline visible" data-lang="is">Engin útgáfa enn — fyrsta útgáfan kemur bráðlega!</em>
+      <em class="i18n-inline" data-lang="en">No editions yet — first edition coming soon!</em>
+    </li>
+  </ul>
+
+  <!-- Subscribe Form (below editions, above footer) -->
   <div class="subscribe-box">
-    <h3><span data-lang="is" class="visible">📬 Fáðu dagblað í tölvupósti</span><span data-lang="en">📬 Get the daily digest by email</span></h3>
-    <p><span data-lang="is" class="visible">Skráðu þig og fáðu AI Data Daily beint í pósthólfið á hverjum morgni.</span><span data-lang="en">Subscribe and get AI Data Daily delivered to your inbox every morning.</span></p>
+    <h3>&#x1F4EC; <span class="i18n-inline visible" data-lang="is">Fáðu dagblað í tölvupósti</span><span class="i18n-inline" data-lang="en">Get the daily digest by email</span></h3>
+    <p>
+      <span class="i18n-inline visible" data-lang="is">Skráðu þig og fáðu AI Data Daily beint í pósthólfið á hverjum morgni.</span>
+      <span class="i18n-inline" data-lang="en">Subscribe and get AI Data Daily delivered to your inbox every morning.</span>
+    </p>
     <form class="subscribe-form" id="subscribe-form" onsubmit="handleSubscribe(event)">
       <input type="email" name="email" placeholder="you@example.com" required>
       <input type="text" name="name" placeholder="Nafn / Name" style="max-width: 160px;">
       <!-- Honeypot -->
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field">
       <button type="submit" id="subscribe-btn">
-        <span data-lang="is" class="visible">Gerast áskrifandi</span><span data-lang="en">Subscribe</span>
+        <span class="i18n-inline visible" data-lang="is">Gerast áskrifandi</span><span class="i18n-inline" data-lang="en">Subscribe</span>
       </button>
     </form>
     <div class="lang-pref">
-      <span data-lang="is" class="visible">Tungumál:</span><span data-lang="en">Language:</span>
-      <label><input type="radio" name="lang-pref" value="is" checked> 🇮🇸 Íslenska</label>
-      <label><input type="radio" name="lang-pref" value="en"> 🇬🇧 English</label>
+      <span class="i18n-inline visible" data-lang="is">Tungumál:</span><span class="i18n-inline" data-lang="en">Preferred language:</span>
+      <label><input type="radio" name="lang-pref" value="is" checked> &#x1F1EE;&#x1F1F8; Íslenska</label>
+      <label><input type="radio" name="lang-pref" value="en"> &#x1F1EC;&#x1F1E7; English</label>
     </div>
     <div class="subscribe-msg" id="subscribe-msg"></div>
   </div>
-
-  <h2><span data-lang="is" class="visible">Útgáfur</span><span data-lang="en">Editions</span></h2>
-
-  <ul class="edition-list">
-    <!-- EDITIONS_PLACEHOLDER -->
-    <li><em data-lang="is" class="visible">Engin útgáfa enn — fyrsta útgáfan kemur bráðlega!</em><em data-lang="en">No editions yet — first edition coming soon!</em></li>
-  </ul>
 
   <footer>
     <p>AI Data Daily · <a href="https://ko-fi.com/at0micnews">☕ Ko-fi</a> · Powered by At0mic</p>
@@ -118,7 +125,6 @@
       document.getElementById('btn-is').classList.toggle('active', lang === 'is');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       localStorage.setItem('ai-data-daily-lang', lang);
-      // Update radio button
       var radio = document.querySelector('input[name="lang-pref"][value="' + lang + '"]');
       if (radio) radio.checked = true;
     }
@@ -145,7 +151,7 @@
         body: JSON.stringify({ email: email, name: name, lang: langPref, website: website })
       }).then(function() {
         msg.className = 'subscribe-msg success';
-        msg.textContent = uiLang === 'is' ? '✅ Skráning tókst! Þú færð fyrstu útgáfuna bráðlega.' : '✅ Subscribed! You\'ll receive the next edition.';
+        msg.textContent = uiLang === 'is' ? '✅ Skráning tókst! Þú færð fyrstu útgáfuna bráðlega.' : "✅ Subscribed! You'll receive the next edition.";
         form.email.value = '';
         form.name.value = '';
       }).catch(function() {

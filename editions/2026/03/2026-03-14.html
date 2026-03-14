@@ -52,15 +52,18 @@
     <a class="lang-btn" onclick="setLang('en')" id="btn-en"><img src="https://flagcdn.com/20x15/gb.png" alt="GB" style="vertical-align:middle;margin-right:2px" width="20" height="15"> English</a>
   </div>
 
-  <!-- Podcast Players -->
-  <div style="background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.25rem;margin-bottom:2rem">
-    <h3 style="color:#58a6ff;margin:0 0 0.75rem;font-size:0.95rem">🎙️ <span class="i18n-inline visible" data-lang="is">Hlustið á útgáfuna</span><span class="i18n-inline" data-lang="en">Listen to today's edition</span></h3>
-    <p style="color:#8b949e;font-size:0.85rem;margin:0 0 0.5rem"><img src="https://flagcdn.com/20x15/is.png" alt="IS" style="vertical-align:middle;margin-right:4px" width="20" height="15"> Íslenska</p>
+  <!-- Podcast Player — Icelandic -->
+  <div class="i18n visible" data-lang="is" style="background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.25rem;margin-bottom:2rem">
+    <h3 style="color:#58a6ff;margin:0 0 0.75rem;font-size:0.95rem">🎙️ Hlustið á útgáfuna</h3>
     <audio controls preload="metadata" style="width:100%;margin-bottom:0.75rem">
       <source src="ai-data-daily-14MAR26-is.mp3" type="audio/mpeg">
     </audio>
-    <div style="text-align:right;margin-bottom:1rem"><a href="ai-data-daily-14MAR26-is.mp3" download style="background:#238636;color:#fff;padding:4px 12px;border-radius:6px;font-size:0.8rem;text-decoration:none">⬇ Download MP3</a></div>
-    <p style="color:#8b949e;font-size:0.85rem;margin:0 0 0.5rem"><img src="https://flagcdn.com/20x15/gb.png" alt="GB" style="vertical-align:middle;margin-right:4px" width="20" height="15"> English</p>
+    <div style="text-align:right"><a href="ai-data-daily-14MAR26-is.mp3" download style="background:#238636;color:#fff;padding:4px 12px;border-radius:6px;font-size:0.8rem;text-decoration:none">⬇ Hlaða niður MP3</a></div>
+  </div>
+
+  <!-- Podcast Player — English -->
+  <div class="i18n" data-lang="en" style="background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.25rem;margin-bottom:2rem">
+    <h3 style="color:#58a6ff;margin:0 0 0.75rem;font-size:0.95rem">🎙️ Listen to today's edition</h3>
     <audio controls preload="metadata" style="width:100%;margin-bottom:0.75rem">
       <source src="ai-data-daily-14MAR26-en.mp3" type="audio/mpeg">
     </audio>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Data Daily — March 15, 2026 | Weekly Review</title>
+    <meta name="description" content="Weekly review of Microsoft Data & AI ecosystem, Databricks, and data engineering news in English.">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #0a0a0a; color: #e0e0e0; }
+        h1, h2 { color: #4a9eff; }
+        a { color: #4a9eff; }
+        a:hover { color: #6bb6ff; }
+        .divider { color: #666; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>📰 AI Data Weekly Review — Week of March 9-15, 2026</h1>
+    
+    <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+    
+    <h2>🏆 Story of the Week</h2>
+    <p><strong>Microsoft disables V-Order by default in new Fabric lakehouses</strong> — Microsoft quietly changed the default V-Order configuration in Fabric lakehouses this week with the March 1 update. V-Order, their columnar storage optimization that improved query performance, is now disabled for new lakehouses. Existing ones keep their configuration. Why does this matter? If you're spinning up new Fabric environments, you'll need to manually enable V-Order to get the performance benefits you might expect. Microsoft hasn't explained the reasoning, but it's likely related to storage costs or write performance trade-offs.</p>
+
+    <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+    <h2>📊 The Week in Numbers</h2>
+    <p><strong>83</strong> vulnerabilities fixed in Microsoft's March 2026 Patch Tuesday, including one actively exploited zero-day. <strong>1</strong> new Azure Databricks Data Engineer Associate certification launched. <strong>153</strong> upvotes on r/dataengineering for hidden BigQuery features that most people don't know about. <strong>439,917</strong> members in the data engineering subreddit discussing testing practices and AI impact.</p>
+
+    <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+    <h2>🔥 Top 5 Stories You Might Have Missed</h2>
+    
+    <p><strong>New Microsoft Azure Databricks certification drops</strong> — Microsoft launched the Azure Databricks Data Engineer Associate certification on March 13th. Covers Unity Catalog, Delta Lake design patterns, Azure integrations, and security best practices. If you're working in the Microsoft + Databricks ecosystem, this is the credential that proves you know both sides of the fence.</p>
+
+    <p><strong>BigQuery's hidden features are actually useful</strong> — A viral Reddit post shared 5 lesser-known BigQuery features: chained function calls, UNION ALL BY NAME, and WITH expressions that are not CTEs. The chained functions are genuinely handy: SELECT (name).TRIM().REPLACE(' ', '_').UPPER() instead of nested function hell. Worth bookmarking if you're stuck in BigQuery land.</p>
+
+    <p><strong>AI burnout hits data teams differently</strong> — r/dataengineering had a sobering discussion about AI tools increasing workload instead of reducing it. One Data Engineer shared how Claude agents replaced his dashboard work while developers ship features faster, leaving him questioning his role. The reality check: AI doesn't reduce work, it raises expectations.</p>
+
+    <p><strong>Data testing culture remains inconsistent</strong> — A popular thread about testing in data engineering revealed the community is split between teams with full dbt test suites and Great Expectations pipelines versus teams that "eyeball row counts and pray." The consensus: DE testing is decades behind traditional software development.</p>
+
+    <p><strong>dbt + Unity Catalog best practices get an update</strong> — The dbt docs were updated with fresh guidance on Unity Catalog integration, emphasizing cross-catalog data references and Delta Live Tables materialized views. If you're running dbt in a Unity Catalog environment, worth reviewing for optimization opportunities.</p>
+
+    <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+    <h2>🔮 What to Watch This Week</h2>
+    <p>Microsoft Build is coming in May, but expect more Fabric updates to drop throughout March. The V-Order change suggests they're still tuning performance defaults.</p>
+    <p>Databricks is likely to announce more Unity Catalog features following the new certification launch.</p>
+    <p>OpenAI's rumored GPT-5 could shake up the AI tooling landscape if it delivers the promised reasoning improvements.</p>
+
+    <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+    <h2>📌 Platform Updates</h2>
+    <p><strong>Microsoft Fabric</strong> — V-Order disabled by default for new lakehouses as of March 1</p>
+    <p><strong>Azure</strong> — Databricks Data Engineer Associate certification available as of March 13</p>
+    <p><strong>BigQuery</strong> — Chained function calls and other power features getting more attention</p>
+    <p><strong>Unity Catalog</strong> — Updated dbt integration best practices published</p>
+
+    <p><em>Sources: Microsoft Fabric Blog, Azure Tech Community, Databricks Blog, r/dataengineering, dbt Developer Hub, Microsoft security bulletins</em></p>
+</body>
+</html>

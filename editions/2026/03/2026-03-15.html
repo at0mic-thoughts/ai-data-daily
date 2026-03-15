@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Data Daily — 15. mars 2026 | Vikuyfirlit</title>
+    <meta name="description" content="Vikulegt yfirlit yfir Microsoft Data & AI vistkerfi, Databricks, og gagnaverkfræði fréttir. Á íslensku og ensku.">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #0a0a0a; color: #e0e0e0; }
+        .lang-selector { display: flex; gap: 10px; margin-bottom: 20px; padding: 10px; background: #1a1a1a; border-radius: 8px; }
+        .lang-btn { padding: 8px 16px; border: 1px solid #333; background: #2a2a2a; color: #e0e0e0; text-decoration: none; border-radius: 4px; cursor: pointer; }
+        .lang-btn.active { background: #0066cc; border-color: #0066cc; }
+        .content { display: none; }
+        .content.active { display: block; }
+        h1, h2 { color: #4a9eff; }
+        a { color: #4a9eff; }
+        a:hover { color: #6bb6ff; }
+        .divider { color: #666; margin: 20px 0; }
+        .subscribe { background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; }
+        .subscribe a { background: #0066cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.9em; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="lang-selector">
+        <a href="#" class="lang-btn active" onclick="setLanguage('is')">🇮🇸 Íslenska</a>
+        <a href="#" class="lang-btn" onclick="setLanguage('en')">🇬🇧 English</a>
+    </div>
+
+    <div id="content-is" class="content active">
+        <h1>📰 AI Data Weekly — Vikan sem var, 9.-15. mars 2026</h1>
+        
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+        
+        <h2>🏆 Saga vikunnar</h2>
+        <p><strong>📌 Microsoft slekkur á V-Order sjálfkrafa í nýjum Fabric lakehouses</strong> — Microsoft breytti hljóðlega sjálfgefnu V-Order stillingunum í Fabric lakehouses þessa viku (1. mars uppfærsla). V-Order, dálkalagageymslubæting þeirra sem bætti fyrirspurnargógn, er nú slökkt fyrir nýja lakehouses. Þeir sem til eru halda sínum stillingum. Af hverju skiptir þetta máli? Ef þú ert að setja upp ný Fabric umhverfi þarftu að virkja V-Order handvirkt til að fá frammistöðuávinninginn sem þú gætir búist við. Microsoft hefur ekki útskýrt ástæðuna, en það er líklega tengt geymslukostnaði eða skrifgógn málamiðlunum.</p>
+        <p><a href="https://pl.seequality.net/v-order-in-microsoft-fabric-what-is-that/" target="_blank">SeeQuality.net →</a> <em>(Mar 9)</em></p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>📊 Vikan í tölum</h2>
+        <p><strong>83</strong> veikindi lagfærð í Microsoft's mars 2026 Patch Tuesday, þar á meðal einn sem er virkur zero-day<br>
+        <strong>1</strong> ný Azure Databricks Data Engineer Associate vottun sett af stað<br>
+        <strong>153</strong> upvotes á r/dataengineering fyrir falda BigQuery eiginleika sem flestir vita ekki um<br>
+        <strong>439.917</strong> meðlimir í data engineering subreddit að ræða prófunaraðferðir og AI áhrif</p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>🔥 Fimm sem þú gætir hafa misst af</h2>
+        
+        <p><strong>⚡ Ný Microsoft Azure Databricks vottun kemur út</strong> — Microsoft setti af stað Azure Databricks Data Engineer Associate vottunina 13. mars. Nær yfir Unity Catalog, Delta Lake hönnunarmynstur, Azure samþættingar og öryggisbestu starfshætti. Ef þú ert að vinna í Microsoft + Databricks vistkerfinu er þetta skilríkið sem sannar að þú þekkir báðar hliðar girðingarinnar.<br>
+        <a href="https://techcommunity.microsoft.com/blog/skills-hub-blog/new-microsoft-certified-azure-databricks-data-engineer-associate-certification/4494114" target="_blank">Microsoft Tech Community →</a> <em>(Mar 13)</em></p>
+
+        <p><strong>🎯 Faldir eiginleikar BigQuery eru í raun gagnlegir</strong> — Viral Reddit færsla deildi 5 minna þekktum BigQuery eiginleikum: keðjuð fall köll, UNION ALL BY NAME og WITH segðir (ekki CTEs). Keðjuðu föllin eru raunverulega praktísk: <code>SELECT (name).TRIM().REPLACE(' ', '_').UPPER()</code> í stað hreiðraðs falls helvítis. Þess virði að bókamerkja ef þú ert fastur í BigQuery landinu.<br>
+        <a href="https://www.reddit.com/r/dataengineering/comments/1rttfe0/5_bigquery_features_almost_nobody_knows_about/" target="_blank">r/dataengineering →</a> <em>(Mar 14)</em></p>
+
+        <p><strong>🤖 AI kulnun kemur öðruvísi fyrir data teymi</strong> — r/dataengineering átti áhyggjufull umræður um AI verkfæri að auka vinnuálag í stað þess að minnka það. Einn DE deildi því hvernig Claude umboðsmenn komu í stað dashboard vinnu hans á meðan þróunaraðilar senda eiginleika hraðar, sem lætur hann efast um hlutverk sitt. Raunveruleikaskoðunin: AI minnkar ekki vinnu, það hækkar væntingar.<br>
+        <a href="https://www.reddit.com/r/dataengineering/comments/1rtmere/office_culture_is_pretty_bad_right_now_for_me/" target="_blank">r/dataengineering →</a> <em>(Mar 14)</em></p>
+
+        <p><strong>🧪 Data prófunarmennir halda áfram að vera ósamkvæmt</strong> — Vinsæll þráður um prófanir í data engineering leiddi í ljós að samfélagið er skipti milli teymi með fullt dbt prófunarsvítur og Great Expectations leiðslum á móti teymi sem "sjá í gegnum röðtölur og biðja." Samþykktin: DE prófun er áratugi á eftir hefðbundinni hugbúnaðarþróun.<br>
+        <a href="https://www.reddit.com/r/dataengineering/comments/1rti3za/testing_in_de_feels_decades_behind_traditional/" target="_blank">r/dataengineering →</a> <em>(Mar 14)</em></p>
+
+        <p><strong>📈 dbt + Unity Catalog bestu starfshættir fá uppfærslu</strong> — dbt skjölin voru uppfærð með fersku leiðbeiningar um Unity Catalog samþættingu, með áherslu á þvert-catalog gögn tilvísanir og Delta Live Tables efnislegar skoðanir. Ef þú ert að keyra dbt í Unity Catalog umhverfi, þess virði að endurskoða fyrir hagræðingartækifæri.<br>
+        <a href="https://docs.getdbt.com/best-practices/dbt-unity-catalog-best-practices" target="_blank">dbt Developer Hub →</a> <em>(Mar 11)</em></p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>🔮 Framundan</h2>
+        <p>Microsoft Build kemur í maí, en búast má við fleiri Fabric uppfærslum allan mars. V-Order breytingin bendir til þess að þeir séu enn að stilla frammistöðu sjálfgildin.</p>
+        <p>Databricks mun líklega tilkynna fleiri Unity Catalog eiginleika eftir nýja vottunarsetningu.</p>
+        <p>OpenAI's ýmsugerð GPT-5 gæti valdið AI verkfæralandslag ef það skilar lofuðum rökhugsun bættum.</p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>📌 Uppfærslur á kerfum</h2>
+        <p><strong>Microsoft Fabric</strong> — V-Order slökkt sjálfkrafa fyrir nýja lakehouses (1. mars)<br>
+        <strong>Azure</strong> — Databricks Data Engineer Associate vottun tiltæk (13. mars)<br>
+        <strong>BigQuery</strong> — Keðjuð fall köll og aðrir valdaeiginleikar fá meiri athygli<br>
+        <strong>Unity Catalog</strong> — Uppfærðar dbt samþættingar bestu starfshættir birtar</p>
+
+        <p><em>Heimildir: Microsoft Fabric Blog, Azure Tech Community, Databricks Blog, r/dataengineering, dbt Developer Hub, Microsoft öryggisbréf</em></p>
+    </div>
+
+    <div id="content-en" class="content">
+        <h1>📰 AI Data Weekly Review — Week of March 9-15, 2026</h1>
+        
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+        
+        <h2>🏆 Story of the Week</h2>
+        <p><strong>📌 Microsoft disables V-Order by default in new Fabric lakehouses</strong> — Microsoft quietly changed the default V-Order configuration in Fabric lakehouses this week (March 1 update). V-Order, their columnar storage optimization that improved query performance, is now disabled for new lakehouses. Existing ones keep their configuration. Why does this matter? If you're spinning up new Fabric environments, you'll need to manually enable V-Order to get the performance benefits you might expect. Microsoft hasn't explained the reasoning, but it's likely related to storage costs or write performance trade-offs.</p>
+        <p><a href="https://pl.seequality.net/v-order-in-microsoft-fabric-what-is-that/" target="_blank">SeeQuality.net →</a> <em>(Mar 9)</em></p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>📊 The Week in Numbers</h2>
+        <p><strong>83</strong> vulnerabilities fixed in Microsoft's March 2026 Patch Tuesday, including one actively exploited zero-day<br>
+        <strong>1</strong> new Azure Databricks Data Engineer Associate certification launched<br>
+        <strong>153</strong> upvotes on r/dataengineering for hidden BigQuery features that most people don't know about<br>
+        <strong>439,917</strong> members in the data engineering subreddit discussing testing practices and AI impact</p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>🔥 Top 5 Stories You Might Have Missed</h2>
+        
+        <p><strong>⚡ New Microsoft Azure Databricks certification drops</strong> — Microsoft launched the Azure Databricks Data Engineer Associate certification on March 13th. Covers Unity Catalog, Delta Lake design patterns, Azure integrations, and security best practices. If you're working in the Microsoft + Databricks ecosystem, this is the credential that proves you know both sides of the fence.<br>
+        <a href="https://techcommunity.microsoft.com/blog/skills-hub-blog/new-microsoft-certified-azure-databricks-data-engineer-associate-certification/4494114" target="_blank">Microsoft Tech Community →</a> <em>(Mar 13)</em></p>
+
+        <p><strong>🎯 BigQuery's hidden features are actually useful</strong> — A viral Reddit post shared 5 lesser-known BigQuery features: chained function calls, UNION ALL BY NAME, and WITH expressions (not CTEs). The chained functions are genuinely handy: <code>SELECT (name).TRIM().REPLACE(' ', '_').UPPER()</code> instead of nested function hell. Worth bookmarking if you're stuck in BigQuery land.<br>
+        <a href="https://www.reddit.com/r/dataengineering/comments/1rttfe0/5_bigquery_features_almost_nobody_knows_about/" target="_blank">r/dataengineering →</a> <em>(Mar 14)</em></p>
+
+        <p><strong>🤖 AI burnout hits data teams differently</strong> — r/dataengineering had a sobering discussion about AI tools increasing workload instead of reducing it. One DE shared how Claude agents replaced his dashboard work while developers ship features faster, leaving him questioning his role. The reality check: AI doesn't reduce work, it raises expectations.<br>
+        <a href="https://www.reddit.com/r/dataengineering/comments/1rtmere/office_culture_is_pretty_bad_right_now_for_me/" target="_blank">r/dataengineering →</a> <em>(Mar 14)</em></p>
+
+        <p><strong>🧪 Data testing culture remains inconsistent</strong> — A popular thread about testing in data engineering revealed the community is split between teams with full dbt test suites and Great Expectations pipelines versus teams that "eyeball row counts and pray." The consensus: DE testing is decades behind traditional software development.<br>
+        <a href="https://www.reddit.com/r/dataengineering/comments/1rti3za/testing_in_de_feels_decades_behind_traditional/" target="_blank">r/dataengineering →</a> <em>(Mar 14)</em></p>
+
+        <p><strong>📈 dbt + Unity Catalog best practices get an update</strong> — The dbt docs were updated with fresh guidance on Unity Catalog integration, emphasizing cross-catalog data references and Delta Live Tables materialized views. If you're running dbt in a Unity Catalog environment, worth reviewing for optimization opportunities.<br>
+        <a href="https://docs.getdbt.com/best-practices/dbt-unity-catalog-best-practices" target="_blank">dbt Developer Hub →</a> <em>(Mar 11)</em></p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>🔮 What to Watch This Week</h2>
+        <p>Microsoft Build is coming in May, but expect more Fabric updates to drop throughout March. The V-Order change suggests they're still tuning performance defaults.</p>
+        <p>Databricks is likely to announce more Unity Catalog features following the new certification launch.</p>
+        <p>OpenAI's rumored GPT-5 could shake up the AI tooling landscape if it delivers the promised reasoning improvements.</p>
+
+        <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+        <h2>📌 Platform Updates</h2>
+        <p><strong>Microsoft Fabric</strong> — V-Order disabled by default for new lakehouses (March 1)<br>
+        <strong>Azure</strong> — Databricks Data Engineer Associate certification available (March 13)<br>
+        <strong>BigQuery</strong> — Chained function calls and other power features getting more attention<br>
+        <strong>Unity Catalog</strong> — Updated dbt integration best practices published</p>
+
+        <p><em>Sources: Microsoft Fabric Blog, Azure Tech Community, Databricks Blog, r/dataengineering, dbt Developer Hub, Microsoft security bulletins</em></p>
+    </div>
+
+    <div class="subscribe">
+        <h3>📧 Gerast áskrifandi / Subscribe</h3>
+        <p>Fáðu AI Data Daily beint í pósthólfið þitt / Get AI Data Daily delivered to your inbox</p>
+        <a href="https://script.google.com/macros/s/AKfycbwNe5FbkB_JDlrR3pTy0Cj5KRrd-hVDph5oop2SRX4iMXTNpfuJXFtB6caW5takJfwb/exec" target="_blank">Skrá sig / Subscribe</a>
+    </div>
+
+    <div class="footer">
+        <p><a href="https://datadaily.at0mic.com" target="_self">AI Data Daily</a> | 
+        <a href="https://ko-fi.com/at0micnews" target="_blank">☕ Styðja / Support</a> | 
+        <a href="mailto:datadaily@at0mic.com">Tengiliður / Contact</a></p>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Hide all content
+            document.querySelectorAll('.content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-btn').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Show selected content
+            document.getElementById('content-' + lang).classList.add('active');
+            document.querySelector('.lang-btn[onclick*="' + lang + '"]').classList.add('active');
+            
+            // Update page language
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>

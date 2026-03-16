@@ -34,8 +34,6 @@
     .i18n.visible { display: block; }
     .i18n-inline { display: none; }
     .i18n-inline.visible { display: inline; }
-    
-    /* Subscribe form */
     .subscribe-box { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
     .subscribe-box h3 { color: #58a6ff; margin: 0 0 0.5rem; font-size: 1.05rem; }
     .subscribe-box p { color: #8b949e; margin: 0 0 1rem; font-size: 0.9rem; }
@@ -79,29 +77,31 @@
     <a class="lang-btn" onclick="setLang('en')" id="btn-en"><img src="https://flagcdn.com/20x15/gb.png" alt="GB" style="vertical-align:middle;margin-right:2px" width="20" height="15"> English</a>
   </div>
 
-  <!-- Podcast Players -->
-  <div class="i18n visible" data-lang="is" style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem;">
-    <h3 style="color: #58a6ff; margin: 0 0 0.75rem 0; font-size: 0.95rem;">🎙️ Hlustuðu á vikuyfirlit</h3>
-    <audio controls preload="metadata" style="width: 100%; margin-bottom: 0.75rem;">
+  <!-- Podcast Player - Icelandic -->
+  <div class="i18n visible" data-lang="is" style="background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.25rem;margin-bottom:2rem">
+    <h3 style="color:#58a6ff;margin:0 0 0.75rem;font-size:0.95rem">🎙️ Hlustuðu á vikuyfirlit</h3>
+    <audio controls preload="metadata" style="width:100%;margin-bottom:0.75rem">
       <source src="ai-data-daily-15MAR26-is.mp3" type="audio/mpeg">
     </audio>
-    <div style="display: flex; justify-content: flex-end;"><a href="ai-data-daily-15MAR26-is.mp3" download style="background: #238636; color: #fff; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; text-decoration: none;">⬇ Sækja MP3</a></div>
+    <div style="text-align:right"><a href="ai-data-daily-15MAR26-is.mp3" download style="background:#238636;color:#fff;padding:4px 12px;border-radius:6px;font-size:0.8rem;text-decoration:none">⬇ Sækja MP3</a></div>
   </div>
-  <div class="i18n" data-lang="en" style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem;">
-    <h3 style="color: #58a6ff; margin: 0 0 0.75rem 0; font-size: 0.95rem;">🎙️ Listen to the weekly review</h3>
-    <audio controls preload="metadata" style="width: 100%; margin-bottom: 0.75rem;">
+
+  <!-- Podcast Player - English -->
+  <div class="i18n" data-lang="en" style="background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.25rem;margin-bottom:2rem">
+    <h3 style="color:#58a6ff;margin:0 0 0.75rem;font-size:0.95rem">🎙️ Listen to the weekly review</h3>
+    <audio controls preload="metadata" style="width:100%;margin-bottom:0.75rem">
       <source src="ai-data-daily-15MAR26-en.mp3" type="audio/mpeg">
     </audio>
-    <div style="display: flex; justify-content: flex-end;"><a href="ai-data-daily-15MAR26-en.mp3" download style="background: #238636; color: #fff; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; text-decoration: none;">⬇ Download MP3</a></div>
+    <div style="text-align:right"><a href="ai-data-daily-15MAR26-en.mp3" download style="background:#238636;color:#fff;padding:4px 12px;border-radius:6px;font-size:0.8rem;text-decoration:none">⬇ Download MP3</a></div>
   </div>
 
   <!-- Icelandic Version -->
   <div class="i18n visible" data-lang="is">
     <div class="digest-section">
-      <h2>📰 AI Data Weekly — Vikan sem var, 9.-15. mars 2026</h2>
-        
+      <h2>📰 AI Data Weekly - Vikan sem var, 9.-15. mars 2026</h2>
+
       <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-        
+
       <h3>🏆 Saga vikunnar</h3>
       <div class="story-item">
         <p><span class="story-emoji">📌</span><strong class="story-title">Microsoft slekkur á V-Order sjálfkrafa í nýjum Fabric lakehouses</strong></p>
@@ -122,7 +122,7 @@
       <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
 
       <h3>🔥 Fimm sem þú gætir hafa misst af</h3>
-        
+
       <div class="story-item">
         <p><span class="story-emoji">⚡</span><strong class="story-title">Ný Microsoft Azure Databricks vottun kemur út</strong></p>
         <p>Microsoft setti af stað Azure Databricks Data Engineer Associate vottunina 13. mars. Nær yfir Unity Catalog, Delta Lake hönnunarmynstur, Azure samþættingar og öryggisbestu starfshætti. Ef þú ert að vinna í Microsoft + Databricks vistkerfinu er þetta skilríkið sem sannar að þú þekkir báðar hliðar girðingarinnar.</p>
@@ -166,10 +166,10 @@
 
       <h3>📌 Uppfærslur á kerfum</h3>
       <div class="story-item">
-        <p><strong>Microsoft Fabric</strong> — V-Order slökkt sjálfkrafa fyrir nýja lakehouses (1. mars)<br>
-        <strong>Azure</strong> — Databricks Data Engineer Associate vottun tiltæk (13. mars)<br>
-        <strong>BigQuery</strong> — Keðjuð fall köll og aðrir valdaeiginleikar fá meiri athygli<br>
-        <strong>Unity Catalog</strong> — Uppfærðar dbt samþættingar bestu starfshættir birtar</p>
+        <p><strong>Microsoft Fabric</strong> - V-Order slökkt sjálfkrafa fyrir nýja lakehouses (1. mars)<br>
+        <strong>Azure</strong> - Databricks Data Engineer Associate vottun tiltæk (13. mars)<br>
+        <strong>BigQuery</strong> - Keðjuð fall köll og aðrir valdaeiginleikar fá meiri athygli<br>
+        <strong>Unity Catalog</strong> - Uppfærðar dbt samþættingar bestu starfshættir birtar</p>
       </div>
 
       <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
@@ -181,10 +181,10 @@
   <!-- English Version -->
   <div class="i18n" data-lang="en">
     <div class="digest-section">
-      <h2>📰 AI Data Weekly Review — Week of March 9-15, 2026</h2>
-        
+      <h2>📰 AI Data Weekly Review - Week of March 9-15, 2026</h2>
+
       <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-        
+
       <h3>🏆 Story of the Week</h3>
       <div class="story-item">
         <p><span class="story-emoji">📌</span><strong class="story-title">Microsoft disables V-Order by default in new Fabric lakehouses</strong></p>
@@ -205,7 +205,7 @@
       <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
 
       <h3>🔥 Top 5 Stories You Might Have Missed</h3>
-        
+
       <div class="story-item">
         <p><span class="story-emoji">⚡</span><strong class="story-title">New Microsoft Azure Databricks certification drops</strong></p>
         <p>Microsoft launched the Azure Databricks Data Engineer Associate certification on March 13th. Covers Unity Catalog, Delta Lake design patterns, Azure integrations, and security best practices. If you're working in the Microsoft + Databricks ecosystem, this is the credential that proves you know both sides of the fence.</p>
@@ -249,10 +249,10 @@
 
       <h3>📌 Platform Updates</h3>
       <div class="story-item">
-        <p><strong>Microsoft Fabric</strong> — V-Order disabled by default for new lakehouses (March 1)<br>
-        <strong>Azure</strong> — Databricks Data Engineer Associate certification available (March 13)<br>
-        <strong>BigQuery</strong> — Chained function calls and other power features getting more attention<br>
-        <strong>Unity Catalog</strong> — Updated dbt integration best practices published</p>
+        <p><strong>Microsoft Fabric</strong> - V-Order disabled by default for new lakehouses (March 1)<br>
+        <strong>Azure</strong> - Databricks Data Engineer Associate certification available (March 13)<br>
+        <strong>BigQuery</strong> - Chained function calls and other power features getting more attention<br>
+        <strong>Unity Catalog</strong> - Updated dbt integration best practices published</p>
       </div>
 
       <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
@@ -270,7 +270,7 @@
     </p>
     <form class="subscribe-form" id="subscribe-form" onsubmit="handleSubscribe(event)">
       <input type="email" name="email" placeholder="you@example.com" required>
-      <input type="text" name="name" placeholder="Nafn / Name" style="max-width: 160px;">
+      <input type="text" name="name" placeholder="Nafn / Name" style="max-width:160px">
       <!-- Honeypot -->
       <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field">
       <button type="submit" id="subscribe-btn">

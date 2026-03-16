@@ -1,228 +1,304 @@
 <!DOCTYPE html>
 <html lang="is">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Data Daily | 16. mars 2026</title>
-    <meta name="description" content="Daglegar fréttir um Microsoft Fabric, Azure AI Foundry, Databricks og gagnatækni.">
-    <style>
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #0a0a0a; color: #e0e0e0; }
-        .lang-selector { display: flex; gap: 10px; margin-bottom: 20px; padding: 10px; background: #1a1a1a; border-radius: 8px; }
-        .lang-btn { padding: 8px 16px; border: 1px solid #333; background: #2a2a2a; color: #e0e0e0; text-decoration: none; border-radius: 4px; cursor: pointer; }
-        .lang-btn.active { background: #0066cc; border-color: #0066cc; }
-        .content { display: none; }
-        .content.active { display: block; }
-        h1, h2 { color: #4a9eff; }
-        h3 { color: #e0e0e0; }
-        h4 { color: #e0e0e0; }
-        a { color: #4a9eff; }
-        a:hover { color: #6bb6ff; }
-        .divider { color: #666; margin: 20px 0; }
-        .subscribe { background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; }
-        .subscribe a { background: #0066cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; }
-        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.9em; color: #999; }
-        .language-content { display: none; }
-        .language-content.active { display: block; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Data Daily | 16. mars 2026</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    h1 { color: #58a6ff; font-size: 1.6rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+    h2 { color: #4493f8; font-size: 1.2rem; margin-top: 2rem; }
+    h3 { color: #4493f8; font-size: 1rem; margin-top: 1.5rem; }
+    .brand { color: #f0883e; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .title-row h1 { margin: 0; flex: 1; min-width: 200px; }
+    .coffee-button { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0; color: #f59e0b; font-size: 0.9rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .coffee-button:hover { color: #fbbf24; }
+    .subtitle { color: #8b949e; font-size: 0.95rem; margin: 0.5rem 0 2rem; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-toggle { display: flex; gap: 0.5rem; margin: 1rem 0; }
+    .lang-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; text-decoration: none; }
+    .lang-btn:hover { background: #30363d; text-decoration: none; }
+    .lang-btn.active { background: #1f6feb; border-color: #58a6ff; color: #fff; }
+    .nav-links { margin-bottom: 1rem; }
+    .nav-links a { color: #8b949e; font-size: 0.9rem; margin-right: 1rem; }
+    .digest-section { margin: 2rem 0; }
+    .divider { color: #30363d; font-size: 0.8rem; margin: 1.5rem 0; letter-spacing: 0.1em; }
+    .story-item { margin: 1.5rem 0; }
+    .story-emoji { color: #fbbf24; margin-right: 0.5rem; }
+    .story-title { font-weight: 700; color: #f0f6fc; }
+    .story-meta { color: #8b949e; font-style: italic; font-size: 0.9rem; }
+    footer { color: #484f58; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #30363d; padding-top: 1rem; }
+    .i18n { display: none; }
+    .i18n.visible { display: block; }
+    .i18n-inline { display: none; }
+    .i18n-inline.visible { display: inline; }
+    .subscribe-box { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .subscribe-box h3 { color: #58a6ff; margin: 0 0 0.5rem; font-size: 1.05rem; }
+    .subscribe-box p { color: #8b949e; margin: 0 0 1rem; font-size: 0.9rem; }
+    .subscribe-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .subscribe-form input[type="email"],
+    .subscribe-form input[type="text"] {
+      background: #0d1117; border: 1px solid #30363d; color: #c9d1d9; padding: 8px 12px;
+      border-radius: 6px; font-size: 0.9rem; flex: 1; min-width: 180px;
+    }
+    .subscribe-form input::placeholder { color: #484f58; }
+    .subscribe-form input:focus { border-color: #58a6ff; outline: none; }
+    .subscribe-form button {
+      background: #238636; color: #fff; border: none; padding: 8px 20px;
+      border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+    }
+    .subscribe-form button:hover { background: #2ea043; }
+    .subscribe-form button:disabled { background: #21262d; color: #484f58; cursor: not-allowed; }
+    .subscribe-msg { margin-top: 0.75rem; font-size: 0.85rem; min-height: 1.2em; }
+    .subscribe-msg.success { color: #3fb950; }
+    .subscribe-msg.error { color: #f85149; }
+    .subscribe-msg.info { color: #58a6ff; }
+    .hp-field { position: absolute; left: -9999px; }
+    .lang-pref { display: flex; gap: 0.75rem; align-items: center; margin-top: 0.75rem; font-size: 0.85rem; color: #8b949e; }
+    .lang-pref label { cursor: pointer; display: flex; align-items: center; gap: 0.3rem; }
+    .lang-pref input[type="radio"] { accent-color: #58a6ff; }
+  </style>
 </head>
 <body>
-    <div class="lang-selector">
-        <a href="#" class="lang-btn active" id="is-btn" onclick="showLanguage('is'); return false;">🇮🇸 Íslenska</a>
-        <a href="#" class="lang-btn" id="en-btn" onclick="showLanguage('en'); return false;">🇬🇧 English</a>
-    </div>
+  <div class="nav-links">
+    <a href="../../..">← <span class="i18n-inline visible" data-lang="is">Til baka</span><span class="i18n-inline" data-lang="en">Back to index</span></a>
+  </div>
 
-    <div id="content-is" class="language-content active" lang="is">
-                <h2>🔷 AI Data Daily | Mánudagur, 16. mars 2026</h2>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <section>
-                    <h3>⚡ Mikilvægast</h3>
-                    
-                    <div class="news-item">
-                        <h4>🎪 FabCon/SQLCon Atlanta í næstu viku</h4>
-                        <p>Yfir 8.000 þátttakendur streyma til Atlanta fyrir stærstu Microsoft Fabric og SQL ráðstefnu ársins. Ef þú missir af Power Hour lotum muntu sjá bara fólk standa. Reddit hópurinn skipuleggur fundina. Búist við stórum tilkynningum.</p>
-                        <a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rr7tca/fabcon_sqlcon_atlanta_2026_megathread/" target="_blank">Reddit megathread</a> <em>(Mar 11)</em>
-                    </div>
-                    
-                    <div class="news-item">
-                        <h4>🤖 Microsoft Fabric Task Flows Assistant</h4>
-                        <p>Microsoft starfsmaður gefur út open source aðstoðarmann sem þýðir "vandamál í framleiðslu á mínútum" fyrir Fabric verkflæði. Fyrstu sýniútgáfur sýna sjálfvirka task flow gerð. Gæti verið byltingarkennt fyrir ný Fabric teymi.</p>
-                        <a href="https://github.com/microsoft/fabric-task-flows" target="_blank">GitHub repository</a> <em>(Mar 14)</em>
-                    </div>
-                    
-                    <div class="news-item">
-                        <h4>🔧 Lakehouse Metadata Refresh enn bilað</h4>
-                        <p>Samfélagsreiði nær nýjum hæðum: 90% Fabric lakehouse notenda þurfa hjáleiðir fyrir metadata refresh. "Sjálfvirku" uppfærslurnar sem lofað var í skjölum gerast ekki í raun. Microsoft þarf að laga þetta áður en fleiri teymi yfirgefa DirectLake.</p>
-                        <a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rum6tm/lh_metadata_refresh_what_was_the_thinking/" target="_blank">Reddit umræða</a> <em>(Mar 14)</em>
-                    </div>
-                    
-                    <div class="news-item">
-                        <h4>📊 Databricks Genie Code GA</h4>
-                        <p>Databricks AI kóðunaraðstoðarmaður útskrifaður úr beta. Japanskir notendur tilkynna glæsilegar niðurstöður þegar þeir biðja Genie Code um að byggja upp heila skill bókasöfn. Gæti flýtt fyrir Databricks upptöku í fyrirtækjaþróunarverkflæðum.</p>
-                        <a href="https://twitter.com/hirai_nobuaki" target="_blank">Twitter tilkynning</a> <em>(Mar 16)</em>
-                    </div>
-                </section>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <section>
-                    <h3>📡 Gott að vita</h3>
-                    
-                    <div class="brief-news">
-                        <div class="brief-item">
-                            <strong>🏗️ DirectLake arkitektúr vandamál:</strong> Teymi glíma við takmarkanir á calculated columns sem neyða medallion mengun.
-                            <a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rut5u9/optimal_data_architecture/" target="_blank">Lesið meira</a> <em>(Mar 14)</em>
-                        </div>
-                        
-                        <div class="brief-item">
-                            <strong>💼 DE startup raunveruleiki:</strong> 150 manna fyrirtæki, GB-stærðargögn, Postgres-aðeins stack. Er það þess virði fyrir arkitektúr eignarhald?
-                            <a href="https://www.reddit.com/r/dataengineering/comments/1ruz1y8/received_de_offer_at_a_startup_need_advice/" target="_blank">Lesið meira</a> <em>(Mar 14)</em>
-                        </div>
-                        
-                        <div class="brief-item">
-                            <strong>📈 Databricks Indland stækkun:</strong> Næstum þriggja stafa vöxtur knýr ágengar ráðningar í Bengaluru R&D miðstöð.
-                            <a href="https://twitter.com/EquityMania_IN" target="_blank">Lesið meira</a> <em>(Mar 16)</em>
-                        </div>
-                        
-                        <div class="brief-item">
-                            <strong>⚙️ Dataflow Gen2 Partitioned Compute mælingar:</strong> Samfélagsrannsóknir sýna marktæka frammistöðuhagnað þegar rétt stillt.
-                            <a href="https://www.vojtechsima.com/post/fabric-dataflow-gen2-partitioned-compute-setup-and-benchmark" target="_blank">Lesið meira</a> <em>(Mar 14)</em>
-                        </div>
-                    </div>
-                </section>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <section>
-                    <h3>🔧 Verkfæri dagsins</h3>
-                    
-                    <div class="tool-of-day">
-                        <h4>OpenViking</h4>
-                        <p>Open-source samhengi gagnagrunnur byggður fyrir AI agenta eins og OpenClaw. Stýrir minni, auðlindum og hæfileikum í gegnum skráarkerfi hugmyndafræði. Snemma verkefni en sýnir loforð fyrir agent state management.</p>
-                        <a href="https://github.com/volcengine/OpenViking" target="_blank">GitHub</a> <em>(Mar 16)</em>
-                    </div>
-                </section>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <footer class="digest-footer">
-                    <p><em>Heimildir: r/MicrosoftFabric, r/dataengineering, X/Twitter, GitHub Trending</em></p>
-                </footer>
-            </div>
-            
-            <div id="content-en" class="language-content" lang="en">
-                <h2>🔷 AI Data Daily | Monday, March 16, 2026</h2>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <section>
-                    <h3>⚡ Must Know</h3>
-                    
-                    <div class="news-item">
-                        <h4>🎪 FabCon/SQLCon Atlanta Next Week</h4>
-                        <p>Over 8,000 attendees descending on Atlanta for the year's biggest Microsoft Fabric and SQL conference. If you missed the memo, Power Hour sessions are packed, and the Reddit crew is organizing meetups. Expect major platform announcements.</p>
-                        <a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rr7tca/fabcon_sqlcon_atlanta_2026_megathread/" target="_blank">Reddit megathread</a> <em>(Mar 11)</em>
-                    </div>
-                    
-                    <div class="news-item">
-                        <h4>🤖 Microsoft Fabric Task Flows Assistant</h4>
-                        <p>Microsoft employee drops an open source assistant that translates "problem to production in minutes" for Fabric workflows. Early demo shows automated task flow generation. Could be a game changer for onboarding new Fabric teams.</p>
-                        <a href="https://github.com/microsoft/fabric-task-flows" target="_blank">GitHub repository</a> <em>(Mar 14)</em>
-                    </div>
-                    
-                    <div class="news-item">
-                        <h4>🔧 Lakehouse Metadata Refresh Still Broken</h4>
-                        <p>Community frustration hits a new high: 90% of Fabric lakehouse users need workarounds for metadata refresh. The "automatic" updates promised in docs aren't happening in practice. Microsoft needs to fix this before more teams abandon DirectLake.</p>
-                        <a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rum6tm/lh_metadata_refresh_what_was_the_thinking/" target="_blank">Reddit discussion</a> <em>(Mar 14)</em>
-                    </div>
-                    
-                    <div class="news-item">
-                        <h4>📊 Databricks Genie Code GA</h4>
-                        <p>Databricks' AI coding assistant exits beta. Japanese users report impressive results asking Genie Code to build entire skill libraries. Could accelerate Databricks adoption in enterprise development workflows.</p>
-                        <a href="https://twitter.com/hirai_nobuaki" target="_blank">Twitter announcement</a> <em>(Mar 16)</em>
-                    </div>
-                </section>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <section>
-                    <h3>📡 Worth Knowing</h3>
-                    
-                    <div class="brief-news">
-                        <div class="brief-item">
-                            <strong>🏗️ DirectLake Architecture Dilemma:</strong> Teams struggle with calculated column limitations forcing medallion pollution.
-                            <a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rut5u9/optimal_data_architecture/" target="_blank">Read more</a> <em>(Mar 14)</em>
-                        </div>
-                        
-                        <div class="brief-item">
-                            <strong>💼 DE Startup Reality Check:</strong> 150-person startup, GB-scale data, Postgres-only stack. Worth it for architecture ownership?
-                            <a href="https://www.reddit.com/r/dataengineering/comments/1ruz1y8/received_de_offer_at_a_startup_need_advice/" target="_blank">Read more</a> <em>(Mar 14)</em>
-                        </div>
-                        
-                        <div class="brief-item">
-                            <strong>📈 Databricks India Expansion:</strong> Near triple-digit growth driving aggressive hiring in Bengaluru R&D center.
-                            <a href="https://twitter.com/EquityMania_IN" target="_blank">Read more</a> <em>(Mar 16)</em>
-                        </div>
-                        
-                        <div class="brief-item">
-                            <strong>⚙️ Dataflow Gen2 Partitioned Compute Benchmarks:</strong> Community tests show meaningful performance gains when configured correctly.
-                            <a href="https://www.vojtechsima.com/post/fabric-dataflow-gen2-partitioned-compute-setup-and-benchmark" target="_blank">Read more</a> <em>(Mar 14)</em>
-                        </div>
-                    </div>
-                </section>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <section>
-                    <h3>🔧 Tool of the Day</h3>
-                    
-                    <div class="tool-of-day">
-                        <h4>OpenViking</h4>
-                        <p>Open-source context database built for AI agents like OpenClaw. Manages memory, resources, and skills through a file system paradigm. Early project but shows promise for agent state management.</p>
-                        <a href="https://github.com/volcengine/OpenViking" target="_blank">GitHub</a> <em>(Mar 16)</em>
-                    </div>
-                </section>
-                
-                <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-                
-                <footer class="digest-footer">
-                    <p><em>Sources: r/MicrosoftFabric, r/dataengineering, X/Twitter, GitHub Trending</em></p>
-                </footer>
-            </div>
-    <div class="footer">
-        <p>
-            <a href="https://ko-fi.com/at0micnews" target="_blank">☕ Support us on Ko-fi</a> | 
-            <a href="https://script.google.com/macros/s/AKfycbwNe5FbkB_JDlrR3pTy0Cj5KRrd-hVDph5oop2SRX4iMXTNpfuJXFtB6caW5takJfwb/exec" target="_blank">📧 Subscribe for email updates</a>
-        </p>
-    </div>
+  <p class="brand">At0mic News</p>
+  <div class="title-row">
+    <h1>🔷 AI Data Daily</h1>
+    <a class="coffee-button" href="https://ko-fi.com/at0micnews" target="_blank">☕ <span class="i18n-inline visible" data-lang="is">Styrkja</span><span class="i18n-inline" data-lang="en">Buy me a coffee</span></a>
+  </div>
 
-    <script>
-        function showLanguage(lang) {
-            // Hide all content
-            document.querySelectorAll('.language-content').forEach(el => {
-                el.classList.remove('active');
-            });
-            
-            // Show selected content
-            document.getElementById('content-' + lang).classList.add('active');
-            
-            // Update button states
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.getElementById(lang + '-btn').classList.add('active');
-            
-            // Update document language
-            document.documentElement.lang = lang;
-            
-            // Update page title
-            if (lang === 'is') {
-                document.title = 'AI Data Daily | 16. mars 2026';
-            } else {
-                document.title = 'AI Data Daily | March 16, 2026';
-            }
-        }
-    </script>
+  <div class="lang-toggle">
+    <a class="lang-btn active" onclick="setLang('is')" id="btn-is"><img src="https://flagcdn.com/20x15/is.png" alt="IS" style="vertical-align:middle;margin-right:2px" width="20" height="15"> Íslenska</a>
+    <a class="lang-btn" onclick="setLang('en')" id="btn-en"><img src="https://flagcdn.com/20x15/gb.png" alt="GB" style="vertical-align:middle;margin-right:2px" width="20" height="15"> English</a>
+  </div>
+
+  <!-- Icelandic Version -->
+  <div class="i18n visible" data-lang="is">
+    <div class="digest-section">
+      <h2>🔷 AI Data Daily - Mánudagur, 16. mars 2026</h2>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>⚡ Mikilvægast</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🎪</span><strong class="story-title">FabCon/SQLCon Atlanta í næstu viku</strong></p>
+        <p>Yfir 8.000 þátttakendur streyma til Atlanta fyrir stærstu Microsoft Fabric og SQL ráðstefnu ársins. Ef þú missir af Power Hour lotum muntu sjá bara fólk standa. Reddit hópurinn skipuleggur fundina. Búist við stórum tilkynningum.</p>
+        <p><a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rr7tca/fabcon_sqlcon_atlanta_2026_megathread/" target="_blank">Reddit megathread →</a> <span class="story-meta">(Mar 11)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🤖</span><strong class="story-title">Microsoft Fabric Task Flows Assistant</strong></p>
+        <p>Microsoft starfsmaður gefur út open source aðstoðarmann sem þýðir "vandamál í framleiðslu á mínútum" fyrir Fabric verkflæði. Fyrstu sýniútgáfur sýna sjálfvirka task flow gerð. Gæti verið byltingarkennt fyrir ný Fabric teymi.</p>
+        <p><a href="https://github.com/microsoft/fabric-task-flows" target="_blank">GitHub repository →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🔧</span><strong class="story-title">Lakehouse Metadata Refresh enn bilað</strong></p>
+        <p>Samfélagsreiði nær nýjum hæðum: 90% Fabric lakehouse notenda þurfa hjáleiðir fyrir metadata refresh. "Sjálfvirku" uppfærslurnar sem lofað var í skjölum gerast ekki í raun. Microsoft þarf að laga þetta áður en fleiri teymi yfirgefa DirectLake.</p>
+        <p><a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rum6tm/lh_metadata_refresh_what_was_the_thinking/" target="_blank">Reddit umræða →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📊</span><strong class="story-title">Databricks Genie Code GA</strong></p>
+        <p>Databricks AI kóðunaraðstoðarmaður útskrifaður úr beta. Japanskir notendur tilkynna glæsilegar niðurstöður þegar þeir biðja Genie Code um að byggja upp heila skill bókasöfn. Gæti flýtt fyrir Databricks upptöku í fyrirtækjaþróunarverkflæðum.</p>
+        <p><a href="https://twitter.com/hirai_nobuaki" target="_blank">Twitter tilkynning →</a> <span class="story-meta">(Mar 16)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>📡 Gott að vita</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🏗️</span><strong class="story-title">DirectLake arkitektúr vandamál</strong> - Teymi glíma við takmarkanir á calculated columns sem neyða medallion mengun.</p>
+        <p><a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rut5u9/optimal_data_architecture/" target="_blank">Lesið meira →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">💼</span><strong class="story-title">DE startup raunveruleiki</strong> - 150 manna fyrirtæki, GB-stærðargögn, Postgres-aðeins stack. Er það þess virði fyrir arkitektúr eignarhald?</p>
+        <p><a href="https://www.reddit.com/r/dataengineering/comments/1ruz1y8/received_de_offer_at_a_startup_need_advice/" target="_blank">Lesið meira →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📈</span><strong class="story-title">Databricks Indland stækkun</strong> - Næstum þriggja stafa vöxtur knýr ágendar ráðningar í Bengaluru R&D miðstöð.</p>
+        <p><a href="https://twitter.com/EquityMania_IN" target="_blank">Lesið meira →</a> <span class="story-meta">(Mar 16)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">⚙️</span><strong class="story-title">Dataflow Gen2 Partitioned Compute mælingar</strong> - Samfélagsrannsóknir sýna marktæka frammistöðuhagnað þegar rétt stillt.</p>
+        <p><a href="https://www.vojtechsima.com/post/fabric-dataflow-gen2-partitioned-compute-setup-and-benchmark" target="_blank">Lesið meira →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>🔧 Verkfæri dagsins</h3>
+
+      <div class="story-item">
+        <p><strong class="story-title">OpenViking</strong> - Open-source samhengi gagnagrunnur byggður fyrir AI agenta eins og OpenClaw. Stýrir minni, auðlindum og hæfileikum í gegnum skráarkerfi hugmyndafræði. Snemma verkefni en sýnir loforð fyrir agent state management.</p>
+        <p><a href="https://github.com/volcengine/OpenViking" target="_blank">GitHub →</a> <span class="story-meta">(Mar 16)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <p><em>Heimildir: r/MicrosoftFabric, r/dataengineering, X/Twitter, GitHub Trending</em></p>
+    </div>
+  </div>
+
+  <!-- English Version -->
+  <div class="i18n" data-lang="en">
+    <div class="digest-section">
+      <h2>🔷 AI Data Daily - Monday, March 16, 2026</h2>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>⚡ Must Know</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🎪</span><strong class="story-title">FabCon/SQLCon Atlanta Next Week</strong></p>
+        <p>Over 8,000 attendees descending on Atlanta for the year's biggest Microsoft Fabric and SQL conference. If you missed the memo, Power Hour sessions are packed, and the Reddit crew is organizing meetups. Expect major platform announcements.</p>
+        <p><a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rr7tca/fabcon_sqlcon_atlanta_2026_megathread/" target="_blank">Reddit megathread →</a> <span class="story-meta">(Mar 11)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🤖</span><strong class="story-title">Microsoft Fabric Task Flows Assistant</strong></p>
+        <p>Microsoft employee drops an open source assistant that translates "problem to production in minutes" for Fabric workflows. Early demo shows automated task flow generation. Could be a game changer for onboarding new Fabric teams.</p>
+        <p><a href="https://github.com/microsoft/fabric-task-flows" target="_blank">GitHub repository →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🔧</span><strong class="story-title">Lakehouse Metadata Refresh Still Broken</strong></p>
+        <p>Community frustration hits a new high: 90% of Fabric lakehouse users need workarounds for metadata refresh. The "automatic" updates promised in docs aren't happening in practice. Microsoft needs to fix this before more teams abandon DirectLake.</p>
+        <p><a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rum6tm/lh_metadata_refresh_what_was_the_thinking/" target="_blank">Reddit discussion →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📊</span><strong class="story-title">Databricks Genie Code GA</strong></p>
+        <p>Databricks' AI coding assistant exits beta. Japanese users report impressive results asking Genie Code to build entire skill libraries. Could accelerate Databricks adoption in enterprise development workflows.</p>
+        <p><a href="https://twitter.com/hirai_nobuaki" target="_blank">Twitter announcement →</a> <span class="story-meta">(Mar 16)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>📡 Worth Knowing</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🏗️</span><strong class="story-title">DirectLake Architecture Dilemma</strong> - Teams struggle with calculated column limitations forcing medallion pollution.</p>
+        <p><a href="https://www.reddit.com/r/MicrosoftFabric/comments/1rut5u9/optimal_data_architecture/" target="_blank">Read more →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">💼</span><strong class="story-title">DE Startup Reality Check</strong> - 150-person startup, GB-scale data, Postgres-only stack. Worth it for architecture ownership?</p>
+        <p><a href="https://www.reddit.com/r/dataengineering/comments/1ruz1y8/received_de_offer_at_a_startup_need_advice/" target="_blank">Read more →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📈</span><strong class="story-title">Databricks India Expansion</strong> - Near triple-digit growth driving aggressive hiring in Bengaluru R&D center.</p>
+        <p><a href="https://twitter.com/EquityMania_IN" target="_blank">Read more →</a> <span class="story-meta">(Mar 16)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">⚙️</span><strong class="story-title">Dataflow Gen2 Partitioned Compute Benchmarks</strong> - Community tests show meaningful performance gains when configured correctly.</p>
+        <p><a href="https://www.vojtechsima.com/post/fabric-dataflow-gen2-partitioned-compute-setup-and-benchmark" target="_blank">Read more →</a> <span class="story-meta">(Mar 14)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>🔧 Tool of the Day</h3>
+
+      <div class="story-item">
+        <p><strong class="story-title">OpenViking</strong> - Open-source context database built for AI agents like OpenClaw. Manages memory, resources, and skills through a file system paradigm. Early project but shows promise for agent state management.</p>
+        <p><a href="https://github.com/volcengine/OpenViking" target="_blank">GitHub →</a> <span class="story-meta">(Mar 16)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <p><em>Sources: r/MicrosoftFabric, r/dataengineering, X/Twitter, GitHub Trending</em></p>
+    </div>
+  </div>
+
+  <!-- Subscribe Form -->
+  <div class="subscribe-box">
+    <h3>📬 <span class="i18n-inline visible" data-lang="is">Fáðu dagblað í tölvupósti</span><span class="i18n-inline" data-lang="en">Get the daily digest by email</span></h3>
+    <p>
+      <span class="i18n-inline visible" data-lang="is">Skráðu þig og fáðu AI Data Daily beint í pósthólfið á hverjum morgni.</span>
+      <span class="i18n-inline" data-lang="en">Subscribe and get AI Data Daily delivered to your inbox every morning.</span>
+    </p>
+    <form class="subscribe-form" id="subscribe-form" onsubmit="handleSubscribe(event)">
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <input type="text" name="name" placeholder="Nafn / Name" style="max-width:160px">
+      <!-- Honeypot -->
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field">
+      <button type="submit" id="subscribe-btn">
+        <span class="i18n-inline visible" data-lang="is">Gerast áskrifandi</span><span class="i18n-inline" data-lang="en">Subscribe</span>
+      </button>
+    </form>
+    <div class="lang-pref">
+      <span class="i18n-inline visible" data-lang="is">Tungumál:</span><span class="i18n-inline" data-lang="en">Preferred language:</span>
+      <label><input type="radio" name="lang-pref" value="is" checked> <img src="https://flagcdn.com/20x15/is.png" alt="IS" style="vertical-align:middle;margin-right:2px" width="20" height="15"> Íslenska</label>
+      <label><input type="radio" name="lang-pref" value="en"> <img src="https://flagcdn.com/20x15/gb.png" alt="GB" style="vertical-align:middle;margin-right:2px" width="20" height="15"> English</label>
+    </div>
+    <div class="subscribe-msg" id="subscribe-msg"></div>
+  </div>
+
+  <footer>
+    <p>AI Data Daily · <a href="https://ko-fi.com/at0micnews" target="_blank">☕ Ko-fi</a> · Powered by At0mic</p>
+  </footer>
+
+  <script>
+    var SUBSCRIBE_URL = 'https://script.google.com/macros/s/AKfycbwNe5FbkB_JDlrR3pTy0Cj5KRrd-hVDph5oop2SRX4iMXTNpfuJXFtB6caW5takJfwb/exec';
+
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function(el) {
+        el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+      });
+      document.getElementById('btn-is').classList.toggle('active', lang === 'is');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      localStorage.setItem('ai-data-daily-lang', lang);
+      var radio = document.querySelector('input[name="lang-pref"][value="' + lang + '"]');
+      if (radio) radio.checked = true;
+    }
+
+    function handleSubscribe(e) {
+      e.preventDefault();
+      var form = document.getElementById('subscribe-form');
+      var btn = document.getElementById('subscribe-btn');
+      var msg = document.getElementById('subscribe-msg');
+      var email = form.email.value.trim();
+      var name = form.name.value.trim();
+      var website = form.website.value;
+      var langPref = document.querySelector('input[name="lang-pref"]:checked').value;
+      var uiLang = localStorage.getItem('ai-data-daily-lang') || 'is';
+
+      btn.disabled = true;
+      msg.className = 'subscribe-msg info';
+      msg.textContent = uiLang === 'is' ? 'Skráir...' : 'Subscribing...';
+
+      fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, name: name, lang: langPref, website: website, newsletter: 'ai-data-daily' })
+      }).then(function() {
+        msg.className = 'subscribe-msg success';
+        msg.textContent = uiLang === 'is' ? '✅ Skráning tókst! Þú færð fyrstu útgáfuna bráðlega.' : "✅ Subscribed! You'll receive the next edition.";
+        form.email.value = '';
+        form.name.value = '';
+      }).catch(function() {
+        msg.className = 'subscribe-msg error';
+        msg.textContent = uiLang === 'is' ? '❌ Villa kom upp. Reyndu aftur.' : '❌ Something went wrong. Please try again.';
+      }).finally(function() {
+        btn.disabled = false;
+      });
+    }
+
+    // Restore saved language preference
+    var saved = localStorage.getItem('ai-data-daily-lang');
+    if (saved) setLang(saved);
+  </script>
 </body>
 </html>

@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Data Daily | 16. mars 2026</title>
     <meta name="description" content="Daglegar fréttir um Microsoft Fabric, Azure AI Foundry, Databricks og gagnatækni.">
-    <link rel="stylesheet" href="/style.css">
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; background: #0a0a0a; color: #e0e0e0; }
+        .lang-selector { display: flex; gap: 10px; margin-bottom: 20px; padding: 10px; background: #1a1a1a; border-radius: 8px; }
+        .lang-btn { padding: 8px 16px; border: 1px solid #333; background: #2a2a2a; color: #e0e0e0; text-decoration: none; border-radius: 4px; cursor: pointer; }
+        .lang-btn.active { background: #0066cc; border-color: #0066cc; }
+        .content { display: none; }
+        .content.active { display: block; }
+        h1, h2 { color: #4a9eff; }
+        h3 { color: #e0e0e0; }
+        h4 { color: #e0e0e0; }
+        a { color: #4a9eff; }
+        a:hover { color: #6bb6ff; }
+        .divider { color: #666; margin: 20px 0; }
+        .subscribe { background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 20px 0; text-align: center; }
+        .subscribe a { background: #0066cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block; }
+        .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.9em; color: #999; }
+        .language-content { display: none; }
+        .language-content.active { display: block; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1><a href="/" target="_self">AI Data Daily</a></h1>
-            <div class="language-selector">
-                <button onclick="showLanguage('is')" class="lang-btn active" id="is-btn">
-                    <img src="https://flagcdn.com/w20/is.png" alt="IS" width="16" height="12"> Íslenska
-                </button>
-                <button onclick="showLanguage('en')" class="lang-btn" id="en-btn">
-                    <img src="https://flagcdn.com/w20/gb.png" alt="EN" width="16" height="12"> English
-                </button>
-            </div>
-        </div>
-    </header>
+    <div class="lang-selector">
+        <a href="#" class="lang-btn active" id="is-btn" onclick="showLanguage('is'); return false;">🇮🇸 Íslenska</a>
+        <a href="#" class="lang-btn" id="en-btn" onclick="showLanguage('en'); return false;">🇬🇧 English</a>
+    </div>
 
-    <main>
-        <article>
-            <div id="content-is" class="language-content active" lang="is">
+    <div id="content-is" class="language-content active" lang="is">
                 <h2>🔷 AI Data Daily | Mánudagur, 16. mars 2026</h2>
                 
                 <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
@@ -183,17 +190,12 @@
                     <p><em>Sources: r/MicrosoftFabric, r/dataengineering, X/Twitter, GitHub Trending</em></p>
                 </footer>
             </div>
-        </article>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <p>
-                <a href="https://ko-fi.com/at0micnews" target="_blank">☕ Support us on Ko-fi</a> | 
-                <a href="https://script.google.com/macros/s/AKfycbwNe5FbkB_JDlrR3pTy0Cj5KRrd-hVDph5oop2SRX4iMXTNpfuJXFtB6caW5takJfwb/exec" target="_blank">📧 Subscribe for email updates</a>
-            </p>
-        </div>
-    </footer>
+    <div class="footer">
+        <p>
+            <a href="https://ko-fi.com/at0micnews" target="_blank">☕ Support us on Ko-fi</a> | 
+            <a href="https://script.google.com/macros/s/AKfycbwNe5FbkB_JDlrR3pTy0Cj5KRrd-hVDph5oop2SRX4iMXTNpfuJXFtB6caW5takJfwb/exec" target="_blank">📧 Subscribe for email updates</a>
+        </p>
+    </div>
 
     <script>
         function showLanguage(lang) {

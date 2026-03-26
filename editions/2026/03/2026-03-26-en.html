@@ -12,15 +12,13 @@
     .brand { color: #f0883e; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
     .title-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
     .title-row h1 { margin: 0; flex: 1; min-width: 200px; }
-    .coffee-button { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0; color: #f59e0b; font-size: 0.9rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
-    .subtitle { color: #8b949e; font-size: 0.95rem; margin: 0.5rem 0 2rem; }
-    a { color: #58a6ff; text-decoration: none; }
     .digest-section { margin: 2rem 0; }
     .divider { color: #30363d; font-size: 0.8rem; margin: 1.5rem 0; letter-spacing: 0.1em; }
     .story-item { margin: 1.5rem 0; }
     .story-emoji { color: #fbbf24; margin-right: 0.5rem; }
     .story-title { font-weight: 700; color: #f0f6fc; }
     .story-meta { color: #8b949e; font-style: italic; font-size: 0.9rem; }
+    footer { color: #484f58; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #30363d; padding-top: 1rem; }
   </style>
 </head>
 <body>
@@ -29,52 +27,57 @@
     <h1>🔷 AI Data Daily</h1>
   </div>
 
-  <div style="background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.25rem;margin-bottom:2rem">
-    <h3 style="color:#58a6ff;margin:0 0 0.75rem;font-size:0.95rem">🎙️ Listen to today's edition</h3>
-    <audio controls preload="metadata" style="width:100%;margin-bottom:0.75rem">
-      <source src="ai-data-daily-26MAR26.mp3" type="audio/mpeg">
-    </audio>
-  </div>
-
   <div class="digest-section">
     <h2>🔷 AI Data Daily — Thursday, March 26, 2026</h2>
+
     <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
     <h3>⚡ Must Know</h3>
+
     <div class="story-item">
-      <p><span class="story-emoji">📌</span><strong class="story-title">Microsoft Fabric March 2026 Feature Summary and FabCon keynotes</strong></p>
-      <p>FabCon Atlanta kicked off with a massive update to the Fabric platform. Key highlights: OneLake Catalog Govern for admins (GA), Workspace tags (GA), and Branched workspaces with Git integration (Preview). A new Bulk import/export API for item definitions was also released, making multi-environment deployments much smoother. This is the year's biggest update so far, showing a heavy focus on enterprise governance and DevOps patterns.</p>
-      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/fabric-march-2026-feature-summary/" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 20)</span></p>
+      <p><span class="story-emoji">🛡️</span><strong class="story-title">Databricks Launches Lakewatch and Acquires Two Security Startups</strong></p>
+      <p>Databricks has unveiled Lakewatch, a new AI-driven security product designed for unified threat detection and investigation within the Lakehouse. To bolster this launch, the company confirmed the acquisition of two stealth-mode security startups, signaling a major push into the AI security posture management (AI-SPM) space.</p>
+      <p><a href="https://theaiinsider.tech/2026/03/25/databricks-expands-ai-security-strategy-with-lakewatch-launch-and-dual-acquisitions/" target="_blank">The AI Insider →</a> <span class="story-meta">(Mar 25)</span></p>
     </div>
+
     <div class="story-item">
-      <p><span class="story-emoji">📌</span><strong class="story-title">Fabric Data Factory gets Mapping Data Flows and Mirroring expansion</strong></p>
-      <p>The Data Factory team announced Mapping Data Flows in Fabric (coming June), one of the most requested features for Spark-scale low-code transformations. Additionally, Mirroring for Oracle and SAP Datasphere is now GA, and Mirroring for SharePoint lists is in preview. The Migration Assistant is now in public preview to help teams move ADF and Synapse pipelines to Fabric with minimal friction.</p>
-      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/fabric-data-factory-at-fabcon-atlanta-built-for-modern-data-integration?ft=All" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 20)</span></p>
+      <p><span class="story-emoji">📊</span><strong class="story-title">Copilot for Real-Time Dashboards in Microsoft Fabric</strong></p>
+      <p>A significant update for Fabric users: Copilot is now integrated into Real-Time Dashboards. Data engineers and analysts can use natural language to generate and modify KQL-backed visuals directly, lowering the barrier for real-time monitoring without needing deep Kusto Query Language expertise.</p>
+      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/use-copilot-to-create-visuals-in-real-time-dashboards-preview" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 25)</span></p>
     </div>
+
     <div class="story-item">
-      <p><span class="story-emoji">🤖</span><strong class="story-title">dltHub launches Data Quality framework for Microsoft Fabric</strong></p>
-      <p>dlthub, the popular open-source Python library for data ingestion, now has official support for Microsoft Fabric. This is critical as Fabric lacks a built-in Data Quality engine. With dlthub, teams can implement Write-Audit-Publish (WAP) patterns, automatic PII detection, and strict schema enforcement directly in Fabric notebooks, significantly reducing operational firefighting.</p>
-      <p><a href="https://dlthub.com/blog/microsoft-fabric-meets-dlt" target="_blank">dltHub Blog →</a> <span class="story-meta">(Mar 25)</span></p>
+      <p><span class="story-emoji">🛠️</span><strong class="story-title">SSMS 22.4.1 GA with GitHub Copilot Integration</strong></p>
+      <p>SQL Server Management Studio (SSMS) 22.4.1 has reached General Availability. The headliner is the GA of GitHub Copilot within SSMS, bringing AI-assisted T-SQL authoring and debugging to the desktop IDE. This release also addresses several highly requested community bug fixes.</p>
+      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/sql-server-management-studio-ssms-22-4-1-and-github-copilot-in-ssms-generally-available" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 25)</span></p>
     </div>
+
     <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
     <h3>📡 Worth Knowing</h3>
+
     <div class="story-item">
-      <p><span class="story-emoji">⚡</span><strong class="story-title">Fabric CLI v1.5 release is an execution layer for AI agents</strong> — The new release includes Model Context Protocol (MCP) support, enabling AI agents to operate directly in Fabric environments via CLI commands.</p>
-      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/fabric-march-2026-feature-summary/#post-34196-_Toc224559591" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 20)</span></p>
+      <p><span class="story-emoji">🧠</span><strong class="story-title">Quantization from the Ground Up</strong> — A deep dive into the mechanics of LLM quantization, essential for data engineers deploying local or edge models.</p>
+      <p><a href="https://ngrok.com/blog/quantization" target="_blank">ngrok →</a> <span class="story-meta">(Mar 23)</span></p>
     </div>
+
     <div class="story-item">
-      <p><span class="story-emoji">📊</span><strong class="story-title">Data warehouse disaster story: 15 years of the same mistakes</strong> — A fascinating Reddit discussion on how companies lose their business logic during staff turnover or migrations, and why a "modern cloud stack" doesn't fix it automatically.</p>
-      <p><a href="https://www.reddit.com/r/dataengineering/comments/1s3pvpc/i_spent_15_years_watching_the_same_data_warehouse/" target="_blank">r/dataengineering on Reddit →</a> <span class="story-meta">(Mar 25)</span></p>
+      <p><span class="story-emoji">🏆</span><strong class="story-title">ARC-AGI-3 Released</strong> — The latest benchmark from the ARC Prize team, pushing the limits of AI reasoning beyond simple pattern matching.</p>
+      <p><a href="https://arcprize.org/arc-agi/3" target="_blank">ARC Prize →</a> <span class="story-meta">(Mar 23)</span></p>
     </div>
-    <div class="story-item">
-      <p><span class="story-emoji">📉</span><strong class="story-title">90% of Claude-linked output going to GitHub repos w <2 stars</strong> — New data suggests AI is generating massive amounts of code that ends up in small, obscure projects, raising questions about overall quality and maintenance.</p>
-      <p><a href="https://www.claudescode.dev/?window=since_launch" target="_blank">Claudescode →</a> <span class="story-meta">(Mar 25)</span></p>
-    </div>
+
     <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
     <h3>🔧 Tool of the Day</h3>
+
     <div class="story-item">
-      <p><strong class="story-title">Data Engineer Handbook</strong> — A massive curated repository of resources, links, and guides for everything related to data engineering.</p>
-      <p><a href="https://github.com/DataExpert-io/data-engineer-handbook" target="_blank">GitHub: DataExpert-io/data-engineer-handbook →</a> <span class="story-meta">(Mar 26)</span></p>
+      <p><strong class="story-title">LiteLLM</strong> — A lightweight Python SDK and AI Proxy that maps 100+ LLM APIs (Bedrock, Azure, Databricks) to the OpenAI format. Features unified cost tracking, guardrails, and load balancing for enterprise data platforms.</p>
+      <p><a href="https://github.com/BerriAI/litellm" target="_blank">GitHub: BerriAI/litellm →</a> <span class="story-meta">(Mar 26)</span></p>
     </div>
+
+    <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+    <p><em>Sources: Microsoft Fabric Blog, Databricks Blog, Hacker News, Web Search, GitHub Trending</em></p>
   </div>
 </body>
 </html>

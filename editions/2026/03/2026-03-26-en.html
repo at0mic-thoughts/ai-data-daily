@@ -10,74 +10,75 @@
     h2 { color: #4493f8; font-size: 1.2rem; margin-top: 2rem; }
     h3 { color: #4493f8; font-size: 1rem; margin-top: 1.5rem; }
     .brand { color: #f0883e; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
-    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-    .title-row h1 { margin: 0; flex: 1; min-width: 200px; }
-    .digest-section { margin: 2rem 0; }
     .divider { color: #30363d; font-size: 0.8rem; margin: 1.5rem 0; letter-spacing: 0.1em; }
     .story-item { margin: 1.5rem 0; }
     .story-emoji { color: #fbbf24; margin-right: 0.5rem; }
     .story-title { font-weight: 700; color: #f0f6fc; }
     .story-meta { color: #8b949e; font-style: italic; font-size: 0.9rem; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer { color: #484f58; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #30363d; padding-top: 1rem; }
   </style>
 </head>
 <body>
   <p class="brand">Atomic News</p>
-  <div class="title-row">
-    <h1>🔷 AI Data Daily</h1>
+  <h1>🔷 AI Data Daily — Thursday, March 26, 2026</h1>
+
+  <div style="background:#161b22;border:1px solid #30363d;border-radius:12px;padding:1.25rem;margin-bottom:2rem">
+    <h3 style="color:#58a6ff;margin:0 0 0.75rem;font-size:0.95rem">🎙️ Listen to today's edition</h3>
+    <audio controls preload="metadata" style="width:100%;margin-bottom:0.75rem">
+      <source src="ai-data-daily-26MAR26.mp3" type="audio/mpeg">
+    </audio>
   </div>
 
   <div class="digest-section">
-    <h2>🔷 AI Data Daily — Thursday, March 26, 2026</h2>
-
     <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-
     <h3>⚡ Must Know</h3>
-
     <div class="story-item">
-      <p><span class="story-emoji">🛡️</span><strong class="story-title">Databricks Launches Lakewatch and Acquires Two Security Startups</strong></p>
-      <p>Databricks has unveiled Lakewatch, a new AI-driven security product designed for unified threat detection and investigation within the Lakehouse. To bolster this launch, the company confirmed the acquisition of two stealth-mode security startups, signaling a major push into the AI security posture management (AI-SPM) space.</p>
-      <p><a href="https://theaiinsider.tech/2026/03/25/databricks-expands-ai-security-strategy-with-lakewatch-launch-and-dual-acquisitions/" target="_blank">The AI Insider →</a> <span class="story-meta">(Mar 25)</span></p>
+      <p><span class="story-emoji">📌</span><strong class="story-title">Microsoft Fabric enters the "Agentic" era with major FabCon announcements</strong></p>
+      <p>Microsoft unveiled a new vision for connecting AI to enterprise data at FabCon 2026. Key reveals include the Database Hub (early access) for unified cross-engine management, Fabric IQ for baked-in semantic reasoning, and the General Availability of Model Context Protocol (MCP) support. This marks a strategic shift from Fabric being just an analytics lake to a decision surface where autonomous agents can reason over and act on live data within governed boundaries.</p>
+      <p><a href="https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/" target="_blank">Microsoft Azure Blog →</a> <span class="story-meta">(Mar 26, Microsoft)</span></p>
     </div>
-
     <div class="story-item">
-      <p><span class="story-emoji">📊</span><strong class="story-title">Copilot for Real-Time Dashboards in Microsoft Fabric</strong></p>
-      <p>A significant update for Fabric users: Copilot is now integrated into Real-Time Dashboards. Data engineers and analysts can use natural language to generate and modify KQL-backed visuals directly, lowering the barrier for real-time monitoring without needing deep Kusto Query Language expertise.</p>
-      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/use-copilot-to-create-visuals-in-real-time-dashboards-preview" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 25)</span></p>
+      <p><span class="story-emoji">📌</span><strong class="story-title">Fabric Data Factory gets MCP Server and enhanced dbt integration</strong></p>
+      <p>The Data Factory team introduced an official MCP Server, allowing agents like Claude or GitHub Copilot to manage pipelines and dataflows via chat. New dbt job enhancements now support direct GitHub integration, and Mapping Data Flows are confirmed to run natively in Fabric by June 2026. These updates prioritize "feature parity" to make the migration from Azure Data Factory (ADF) a one-click reality for enterprise teams.</p>
+      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/fabric-data-factory-at-fabcon-atlanta-built-for-modern-data-integration?ft=All" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 26, Microsoft)</span></p>
     </div>
-
     <div class="story-item">
-      <p><span class="story-emoji">🛠️</span><strong class="story-title">SSMS 22.4.1 GA with GitHub Copilot Integration</strong></p>
-      <p>SQL Server Management Studio (SSMS) 22.4.1 has reached General Availability. The headliner is the GA of GitHub Copilot within SSMS, bringing AI-assisted T-SQL authoring and debugging to the desktop IDE. This release also addresses several highly requested community bug fixes.</p>
-      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/sql-server-management-studio-ssms-22-4-1-and-github-copilot-in-ssms-generally-available" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 25)</span></p>
+      <p><span class="story-emoji">📌</span><strong class="story-title">Databricks Lakewatch SIEM and SQL Serverless advancements</strong></p>
+      <p>Databricks has launched Lakewatch, an open, agentic SIEM built on its security lakehouse architecture to combat AI-driven threats. Concurrently, Databricks SQL Serverless is now GA across AWS and Azure, and new advanced governance features for Unity Catalog have been introduced to support massive-scale data estates. These moves signal a direct challenge to traditional security vendors and a focus on cost-efficient serverless compute.</p>
+      <p><a href="https://techedgeai.com/databricks-enters-security-market-with-launch-of-lakewatch-new-open-agentic-siem/" target="_blank">TechEdge AI →</a> <span class="story-meta">(Mar 25, TechEdge)</span></p>
     </div>
-
     <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-
     <h3>📡 Worth Knowing</h3>
-
     <div class="story-item">
-      <p><span class="story-emoji">🧠</span><strong class="story-title">Quantization from the Ground Up</strong> — A deep dive into the mechanics of LLM quantization, essential for data engineers deploying local or edge models.</p>
-      <p><a href="https://ngrok.com/blog/quantization" target="_blank">ngrok →</a> <span class="story-meta">(Mar 23)</span></p>
+      <p><span class="story-emoji">📊</span><strong class="story-title">Power BI Translytical Task Flows reach GA</strong> — Enables end-users to trigger actions, write back data, and call external APIs directly from Power BI reports without context switching.</p>
+      <p><a href="https://powerbi.microsoft.com/en-us/blog/power-bi-march-2026-feature-summary/" target="_blank">Microsoft Power BI Blog →</a> <span class="story-meta">(Mar 26, Microsoft)</span></p>
     </div>
-
     <div class="story-item">
-      <p><span class="story-emoji">🏆</span><strong class="story-title">ARC-AGI-3 Released</strong> — The latest benchmark from the ARC Prize team, pushing the limits of AI reasoning beyond simple pattern matching.</p>
-      <p><a href="https://arcprize.org/arc-agi/3" target="_blank">ARC Prize →</a> <span class="story-meta">(Mar 23)</span></p>
+      <p><span class="story-emoji">🔮</span><strong class="story-title">Planning in Microsoft Fabric IQ arriving in June</strong> — New budgeting and forecasting capabilities will be built directly on top of the Fabric IQ semantic layer, closing the loop between analysis and planning.</p>
+      <p><a href="https://blog.fabric.microsoft.com/en-us/blog/introducing-planning-in-microsoft-fabric-iq-from-historical-data-to-forecasting-the-future" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 26, Microsoft)</span></p>
     </div>
-
+    <div class="story-item">
+      <p><span class="story-emoji">🚗</span><strong class="story-title">Running a Tesla computer on a desk for bug hunting</strong> — A fascinating deep dive into salvaging crashed car parts to boot Tesla's OS on a desk for security research and firmware extraction.</p>
+      <p><a href="https://bugs.xdavidhu.me/tesla/2026/03/23/running-tesla-model-3s-computer-on-my-desk-using-parts-from-crashed-cars/" target="_blank">bugs.xdavidhu.me →</a> <span class="story-meta">(Mar 23, xdavidhu)</span></p>
+    </div>
+    <div class="story-item">
+      <p><span class="story-emoji">🔧</span><strong class="story-title">Optio: Orchestrating AI coding agents in K8s</strong> — An open-source system that handles the full lifecycle from GitHub Issue to merged PR by managing autonomous coding agents in isolated pods.</p>
+      <p><a href="https://github.com/jonwiggins/optio" target="_blank">GitHub: jonwiggins/optio →</a> <span class="story-meta">(Mar 25, GitHub)</span></p>
+    </div>
     <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-
     <h3>🔧 Tool of the Day</h3>
-
     <div class="story-item">
-      <p><strong class="story-title">LiteLLM</strong> — A lightweight Python SDK and AI Proxy that maps 100+ LLM APIs (Bedrock, Azure, Databricks) to the OpenAI format. Features unified cost tracking, guardrails, and load balancing for enterprise data platforms.</p>
-      <p><a href="https://github.com/BerriAI/litellm" target="_blank">GitHub: BerriAI/litellm →</a> <span class="story-meta">(Mar 26)</span></p>
+      <p><strong class="story-title">Lightfeed Extractor</strong> — A robust TypeScript library for web data extraction using LLMs and Playwright. It converts HTML to LLM-ready markdown, handles malformed JSON recovery, and includes built-in browser automation. Perfect for building reliable data pipelines from messy web sources.</p>
+      <p><a href="https://github.com/lightfeed/extractor" target="_blank">GitHub: lightfeed/extractor →</a> <span class="story-meta">(Mar 25)</span></p>
     </div>
-
     <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
-
-    <p><em>Sources: Microsoft Fabric Blog, Databricks Blog, Hacker News, Web Search, GitHub Trending</em></p>
+    <p><em>Sources: Microsoft Fabric Blog, Azure Blog, Databricks, Reddit r/MicrosoftFabric, GitHub Trending, Hacker News</em></p>
   </div>
+
+  <footer>
+    <p>AI Data Daily · Powered by Atomic</p>
+  </footer>
 </body>
 </html>

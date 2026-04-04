@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Data Daily — 4. apríl 2026</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 2rem 1rem; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    h1 { color: #58a6ff; font-size: 1.6rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; }
+    h2 { color: #4493f8; font-size: 1.2rem; margin-top: 2rem; }
+    h3 { color: #4493f8; font-size: 1rem; margin-top: 1.5rem; }
+    .brand { color: #f0883e; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .title-row h1 { margin: 0; flex: 1; min-width: 200px; }
+    .coffee-button { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0; color: #f59e0b; font-size: 0.9rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .coffee-button:hover { color: #fbbf24; }
+    .subtitle { color: #8b949e; font-size: 0.95rem; margin: 0.5rem 0 2rem; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .lang-toggle { display: flex; gap: 0.5rem; margin: 1rem 0; }
+    .lang-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 6px 16px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; text-decoration: none; }
+    .lang-btn:hover { background: #30363d; text-decoration: none; }
+    .lang-btn.active { background: #1f6feb; border-color: #58a6ff; color: #fff; }
+    .nav-links { margin-bottom: 1rem; }
+    .nav-links a { color: #8b949e; font-size: 0.9rem; margin-right: 1rem; }
+    .digest-section { margin: 2rem 0; }
+    .divider { color: #30363d; font-size: 0.8rem; margin: 1.5rem 0; letter-spacing: 0.1em; }
+    .story-item { margin: 1.5rem 0; }
+    .story-emoji { color: #fbbf24; margin-right: 0.5rem; }
+    .story-title { font-weight: 700; color: #f0f6fc; }
+    .story-meta { color: #8b949e; font-style: italic; font-size: 0.9rem; }
+    footer { color: #484f58; font-size: 0.8rem; margin-top: 3rem; border-top: 1px solid #30363d; padding-top: 1rem; }
+    .i18n { display: none; }
+    .i18n.visible { display: block; }
+    .i18n-inline { display: none; }
+    .i18n-inline.visible { display: inline; }
+    .subscribe-box { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+    .subscribe-box h3 { color: #58a6ff; margin: 0 0 0.5rem; font-size: 1.05rem; }
+    .subscribe-box p { color: #8b949e; margin: 0 0 1rem; font-size: 0.9rem; }
+    .subscribe-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .subscribe-form input[type="email"],
+    .subscribe-form input[type="text"] {
+      background: #0d1117; border: 1px solid #30363d; color: #c9d1d9; padding: 8px 12px;
+      border-radius: 6px; font-size: 0.9rem; flex: 1; min-width: 180px;
+    }
+    .subscribe-form input::placeholder { color: #484f58; }
+    .subscribe-form input:focus { border-color: #58a6ff; outline: none; }
+    .subscribe-form button {
+      background: #238636; color: #fff; border: none; padding: 8px 20px;
+      border-radius: 6px; font-size: 0.9rem; font-weight: 600; cursor: pointer; white-space: nowrap;
+    }
+    .subscribe-form button:hover { background: #2ea043; }
+    .subscribe-form button:disabled { background: #21262d; color: #484f58; cursor: not-allowed; }
+    .subscribe-msg { margin-top: 0.75rem; font-size: 0.85rem; min-height: 1.2em; }
+    .subscribe-msg.success { color: #3fb950; }
+    .subscribe-msg.error { color: #f85149; }
+    .lang-pref { margin-top: 0.75rem; font-size: 0.85rem; color: #8b949e; }
+    .lang-pref label { margin-right: 1rem; cursor: pointer; }
+    .subscribe-form input[name="name"] { max-width: 160px; }
+    .lang-flag { vertical-align: middle; margin-right: 2px; }
+    .hp-field { position: absolute; left: -9999px; }
+  </style>
+</head>
+<body>
+  <div class="nav-links">
+    <a href="../../..">← <span class="i18n-inline visible" data-lang="is">Til baka</span><span class="i18n-inline" data-lang="en">Back to index</span></a>
+  </div>
+
+  <p class="brand">Atomic News</p>
+  <div class="title-row">
+    <h1>🔷 AI Data Daily</h1>
+    <a class="coffee-button" href="https://ko-fi.com/at0micnews" target="_blank">☕ <span class="i18n-inline visible" data-lang="is">Styrkja</span><span class="i18n-inline" data-lang="en">Buy me a coffee</span></a>
+  </div>
+
+  <div class="lang-toggle">
+    <a class="lang-btn active" onclick="setLang('is')" id="btn-is"><img src="https://flagcdn.com/20x15/is.png" alt="IS" style="vertical-align:middle;margin-right:2px" width="20" height="15"> Íslenska</a>
+    <a class="lang-btn" onclick="setLang('en')" id="btn-en"><img src="https://flagcdn.com/20x15/gb.png" alt="GB" style="vertical-align:middle;margin-right:2px" width="20" height="15"> English</a>
+  </div>
+
+  <!-- English Version (Mandatory per Task) -->
+  <div class="i18n" data-lang="en">
+    <div class="digest-section">
+      <h2>🔷 AI Data Daily — Saturday, April 4, 2026</h2>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>⚡ Must Know</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📌</span><strong class="story-title">Fabric March 2026: The Agentic Data Platform Arrives</strong></p>
+        <p>Microsoft confirms the GA of Direct Lake on OneLake and the rollout of Fabric Remote MCP Servers. The update focuses on bringing AI agents directly to the data estate with cross-workspace semantic models and native security enforcement via OneLake.</p>
+        <p><a href="https://blog.fabric.microsoft.com/en-us/blog/fabric-march-2026-feature-summary/" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(Mar 18)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📌</span><strong class="story-title">Databricks SQL: Optimized Unity Catalog Writes and Delta Materialization</strong></p>
+        <p>The latest 2026 release notes highlight optimized writes for Unity Catalog managed tables. Partitioned Delta Lake tables now materialize partition columns directly in Parquet data files, improving cross-engine compatibility and performance.</p>
+        <p><a href="https://docs.databricks.com/aws/en/sql/release-notes/2026" target="_blank">Databricks Release Notes →</a> <span class="story-meta">(Mar 27)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🤖</span><strong class="story-title">Beyond RAG: Moving to Virtual Filesystems for AI Docs</strong></p>
+        <p>Mintlify shares how they replaced standard RAG pipelines with a virtual filesystem approach for their AI assistant. This shift addresses context window limitations and improves retrieval accuracy for large-scale documentation.</p>
+        <p><a href="https://www.mintlify.com/blog/how-we-built-a-virtual-filesystem-for-our-assistant" target="_blank">Mintlify Blog →</a> <span class="story-meta">(Apr 3)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">⚠️</span><strong class="story-title">Critical Vulnerability: OpenClaw Privilege Escalation (CVE-2026-33579)</strong></p>
+        <p>A high-severity privilege escalation flaw has been disclosed in OpenClaw. Users are urged to audit their installations as the vulnerability allows unauthorized access via specific API endpoints.</p>
+        <p><a href="https://news.ycombinator.com/item?id=47628608" target="_blank">Hacker News →</a> <span class="story-meta">(Apr 3)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>📡 Worth Knowing</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🚀</span><strong class="story-title">Turbo-Lossless: 12-bit BF16 Compression for GPUs</strong> — A new lossless weight format optimized for fused decode+matmul on NVIDIA and AMD.</p>
+        <p><a href="https://github.com/cenconq25/Turbo-Lossless" target="_blank">GitHub →</a> <span class="story-meta">(Apr 3)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🧳</span><strong class="story-title">Travel Hacking Toolkit: MCP Servers for Mileage search</strong> — A collection of 6 MCP servers and 7 skills for automating award flight and hotel searches.</p>
+        <p><a href="https://github.com/borski/travel-hacking-toolkit" target="_blank">GitHub →</a> <span class="story-meta">(Apr 3)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>🔧 Tool of the Day</h3>
+
+      <div class="story-item">
+        <p><strong class="story-title">Onyx</strong> — An open-source AI platform that provides an advanced chat interface working across every major LLM with integrated memory.</p>
+        <p><a href="https://github.com/onyx-dot-app/onyx" target="_blank">GitHub →</a> <span class="story-meta">(Apr 4)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <p><em>Sources: Microsoft Fabric Blog, Databricks, Hacker News, GitHub Trending</em></p>
+    </div>
+  </div>
+
+  <!-- Icelandic Version -->
+  <div class="i18n visible" data-lang="is">
+    <div class="digest-section">
+      <h2>🔷 AI Data Daily — Laugardagur, 4. apríl 2026</h2>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>⚡ Mikilvægast</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📌</span><strong class="story-title">Fabric mars 2026: Vettvangur AI umboðsmanna er mættur</strong></p>
+        <p>Microsoft staðfestir almennt aðgengi Direct Lake á OneLake og kynningu á Fabric Remote MCP þjónum. Uppfærslan leggur áherslu á að koma AI umboðsmönnum beint að gagnastýringu með merkingarlíkönum þvert á vinnusvæði og innbyggðri öryggisstýringu í gegnum OneLake.</p>
+        <p><a href="https://blog.fabric.microsoft.com/en-us/blog/fabric-march-2026-feature-summary/" target="_blank">Microsoft Fabric Blog →</a> <span class="story-meta">(18. mars)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">📌</span><strong class="story-title">Databricks SQL: Bestuð Unity Catalog skrif og Delta hlutgerving</strong></p>
+        <p>Nýjustu útgáfuskýringar fyrir 2026 sýna bætist skrif fyrir töflur undir stjórn Unity Catalog. Skiptar Delta Lake töflur hlutgera nú skiptidálka beint í Parquet gagnaskrár, sem bætir samhæfni milli kerfa og afköst.</p>
+        <p><a href="https://docs.databricks.com/aws/en/sql/release-notes/2026" target="_blank">Databricks útgáfuskýringar →</a> <span class="story-meta">(27. mars)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🤖</span><strong class="story-title">Handan RAG: Sýndarskráarkerfi fyrir AI skjölun</strong></p>
+        <p>Mintlify deilir hvernig þeir skiptu út hefðbundnum RAG ferlum fyrir sýndarskráarkerfi fyrir AI aðstoðarmanninn sinn. Þessi breyting leysir takmarkanir samhengisglugga og bætir nákvæmni leitarniðurstaðna fyrir stór skjalasöfn.</p>
+        <p><a href="https://www.mintlify.com/blog/how-we-built-a-virtual-filesystem-for-our-assistant" target="_blank">Mintlify Blog →</a> <span class="story-meta">(3. apríl)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">⚠️</span><strong class="story-title">Alvarlegur öryggisbrestur: OpenClaw réttindauppfærsla (CVE-2026-33579)</strong></p>
+        <p>Upplýst hefur verið um alvarlegan veikleika í OpenClaw sem gerir óviðkomandi aðilum kleift að hækka réttindi sín. Notendur eru hvattir til að yfirfara uppsetningar sínar þar sem veikleikinn leyfir óheimilan aðgang í gegnum ákveðna API tengipunkta.</p>
+        <p><a href="https://news.ycombinator.com/item?id=47628608" target="_blank">Hacker News →</a> <span class="story-meta">(3. apríl)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>📡 Gott að vita</h3>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🚀</span><strong class="story-title">Turbo-Lossless: 12-bita BF16 þjöppun fyrir skjákort</strong> — Nýtt þjöppunarsnið án taps sem er hannað fyrir keyrslu á NVIDIA og AMD kortum.</p>
+        <p><a href="https://github.com/cenconq25/Turbo-Lossless" target="_blank">GitHub →</a> <span class="story-meta">(3. apríl)</span></p>
+      </div>
+
+      <div class="story-item">
+        <p><span class="story-emoji">🧳</span><strong class="story-title">Travel Hacking Toolkit: MCP þjónar fyrir punktaleit</strong> — Safn af 6 MCP þjónum og 7 hæfileikum til að sjálfvirka leit að verðlaunaflugi og hótelum.</p>
+        <p><a href="https://github.com/borski/travel-hacking-toolkit" target="_blank">GitHub →</a> <span class="story-meta">(3. apríl)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <h3>🔧 Verkfæri dagsins</h3>
+
+      <div class="story-item">
+        <p><strong class="story-title">Onyx</strong> — Opinn AI vettvangur sem býður upp á öflugt spjallviðmót sem virkar með öllum helstu málmódelum og er með innbyggt minni.</p>
+        <p><a href="https://github.com/onyx-dot-app/onyx" target="_blank">GitHub →</a> <span class="story-meta">(4. apríl)</span></p>
+      </div>
+
+      <div class="divider">━━━━━━━━━━━━━━━━━━━━</div>
+
+      <p><em>Heimildir: Microsoft Fabric Blog, Databricks, Hacker News, GitHub Trending</em></p>
+    </div>
+  </div>
+
+  <div class="subscribe-box">
+    <h3>📬 <span class="i18n-inline visible" data-lang="is">Fáðu dagblað í tölvupósti</span><span class="i18n-inline" data-lang="en">Get the daily digest by email</span></h3>
+    <p>
+      <span class="i18n-inline visible" data-lang="is">Skráðu þig og fáðu AI Data Daily beint í pósthólfið á hverjum morgni.</span>
+      <span class="i18n-inline" data-lang="en">Subscribe and get AI Data Daily delivered to your inbox every morning.</span>
+    </p>
+    <form class="subscribe-form" id="subscribe-form" onsubmit="handleSubscribe(event)">
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <input type="text" name="name" placeholder="Nafn / Name">
+      <!-- Honeypot -->
+      <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp-field">
+      <button type="submit" id="subscribe-btn">
+        <span class="i18n-inline visible" data-lang="is">Gerast áskrifandi</span><span class="i18n-inline" data-lang="en">Subscribe</span>
+      </button>
+    </form>
+    <div class="lang-pref">
+      <span class="i18n-inline visible" data-lang="is">Tungumál:</span><span class="i18n-inline" data-lang="en">Preferred language:</span>
+      <label><input type="radio" name="lang-pref" value="is" checked> <img src="https://flagcdn.com/20x15/is.png" alt="IS" class="lang-flag" width="20" height="15"> Íslenska</label>
+      <label><input type="radio" name="lang-pref" value="en"> <img src="https://flagcdn.com/20x15/gb.png" alt="GB" class="lang-flag" width="20" height="15"> English</label>
+    </div>
+    <div class="subscribe-msg" id="subscribe-msg"></div>
+  </div>
+
+  <footer>
+    <p>AI Data Daily · <a href="https://ko-fi.com/at0micnews" target="_blank">☕ Ko-fi</a> · Powered by Atomic</p>
+  </footer>
+
+  <script>
+    var SUBSCRIBE_URL = 'https://script.google.com/macros/s/AKfycbzebsi1yEfwPAAtBq_0GrzH5eiJBshruQp1OUpu1B2NkRSMtZMyEMX6H80JRO_EOI36/exec';
+
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function(el) {
+        el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+      });
+      document.getElementById('btn-is').classList.toggle('active', lang === 'is');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      localStorage.setItem('ai-data-daily-lang', lang);
+    }
+
+    function handleSubscribe(e) {
+      e.preventDefault();
+      var form = document.getElementById('subscribe-form');
+      var btn = document.getElementById('subscribe-btn');
+      var msg = document.getElementById('subscribe-msg');
+      var email = form.email.value.trim();
+      var name = form.name.value.trim();
+      var website = form.website.value;
+      var langPref = document.querySelector('input[name="lang-pref"]:checked');
+      var langVal = langPref ? langPref.value : 'is';
+      var uiLang = localStorage.getItem('ai-data-daily-lang') || 'is';
+
+      btn.disabled = true;
+      msg.className = 'subscribe-msg';
+      msg.textContent = uiLang === 'is' ? 'Skráir...' : 'Subscribing...';
+      msg.style.color = '#58a6ff';
+
+      fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, name: name, lang: langVal, website: website, newsletter: 'ai-data-daily' })
+      }).then(function() {
+        msg.className = 'subscribe-msg success';
+        msg.textContent = uiLang === 'is' ? '✅ Skráning tókst! Þú færð fyrstu útgáfuna bráðlega.' : "✅ Subscribed! You'll receive the next edition.";
+        form.email.value = '';
+        form.name.value = '';
+      }).catch(function() {
+        msg.className = 'subscribe-msg error';
+        msg.textContent = uiLang === 'is' ? '❌ Villa kom upp. Reyndu aftur.' : '❌ Something went wrong. Please try again.';
+      }).finally(function() {
+        btn.disabled = false;
+      });
+    }
+
+    // Restore saved language preference
+    var saved = localStorage.getItem('ai-data-daily-lang');
+    if (saved) setLang(saved);
+  </script>
+</body>
+</html>

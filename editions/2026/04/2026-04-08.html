@@ -101,27 +101,27 @@
         <h2>⚡ Must Know</h2>
 
   <div class="item">
-    <h3>🔐 <strong>Anthropic's Project Glasswing Bets on AI-Era Software Security</strong></h3>
-    <p>Anthropic is funding open-source security hardening for critical software that underpins AI infrastructure, treating the AI supply chain as a top attack surface. Every data platform deployed on cloud infra is downstream of these vulnerabilities, so this is not a feel-good initiative, it is a practical risk mitigation play.</p>
+    <h3>🛡️ <strong>Project Glasswing: Anthropic Funds Critical Software Security for the AI Era</strong></h3>
+    <p>Anthropic is funding security audits and hardening of open source software that underpins AI infrastructure, because the whole AI stack runs on code that rarely gets serious security scrutiny. This matters for every data team shipping production AI pipelines on open source dependencies.</p>
     <p class="meta"><a href="https://www.anthropic.com/glasswing">Anthropic / Hacker News</a> • Apr 7</p>
   </div>
 
   <div class="item">
-    <h3>🗄️ <strong>AWS Reinvents S3 with a File-Oriented API</strong></h3>
-    <p>S3 Files introduces a richer, file-system-style API on top of S3, signaling that AWS knows object storage needs to behave more like a real filesystem for modern lakehouse workloads. If you are running Delta Lake, Iceberg, or any medallion architecture on S3, read this today.</p>
-    <p class="meta"><a href="https://www.allthingsdistributed.com/2026/04/s3-files-and-the-changing-face-of-s3.html">All Things Distributed</a> • Apr 7</p>
+    <h3>🧠 <strong>Claude Mythos Preview: Anthropic's Next Frontier Model System Card</strong></h3>
+    <p>Anthropic dropped a preview system card for a model called Mythos, with a focus on long-context reasoning and reliability on hard tasks. Worth a close read if you are evaluating which model provider to build agentic data workflows on for the next 12 months.</p>
+    <p class="meta"><a href="https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf">Anthropic / Hacker News</a> • Apr 7</p>
   </div>
 
   <div class="item">
-    <h3>🤖 <strong>GLM-5.1 Pushes Into Long-Horizon Agentic Tasks</strong></h3>
-    <p>Z.ai's GLM-5.1 targets multi-step agentic workflows, which remains the genuinely unsolved problem for AI-driven data pipeline automation. Worth benchmarking against GPT and Claude for orchestration-heavy use cases before assuming the usual suspects are the only options.</p>
+    <h3>🤖 <strong>GLM-5.1: Zhipu AI Targets Long-Horizon Tasks</strong></h3>
+    <p>Zhipu's GLM-5.1 is explicitly engineered for long-horizon task completion, which is exactly the gap that makes current LLMs unreliable in agentic data pipelines and orchestration workflows. Benchmark numbers put it in the conversation with top-tier models, and the open weights angle makes it worth testing.</p>
     <p class="meta"><a href="https://z.ai/blog/glm-5.1">z.ai / Hacker News</a> • Apr 7</p>
   </div>
 
   <div class="item">
-    <h3>🔬 <strong>AI Writes Research Papers That Pass Peer Review</strong></h3>
-    <p>A Nature paper documents an AI system producing ML research papers with minimal human involvement that cleared first-round peer review at a workshop. The research-to-deployment feedback loop is getting dangerously short, and data science teams need to think harder about how they evaluate model claims.</p>
-    <p class="meta"><a href="https://www.nature.com/articles/s41586-026-10265-5">Nature</a> • Apr 8</p>
+    <h3>🗄️ <strong>S3 Files and the Changing Face of S3</strong></h3>
+    <p>AWS is evolving S3 toward file semantics with S3 Files, which could simplify a lot of data engineering patterns currently built around S3's object model limitations. If your lakehouse is on Delta Lake or Iceberg over S3, this architectural shift is worth understanding before it reshapes your stack.</p>
+    <p class="meta"><a href="https://www.allthingsdistributed.com/2026/04/s3-files-and-the-changing-face-of-s3.html">All Things Distributed / Hacker News</a> • Apr 7</p>
   </div>
 
   <hr class="section-divider">
@@ -129,33 +129,33 @@
   <h2>📡 Worth Knowing</h2>
 
   <div class="item">
-    <h3>🧠 <strong>Anthropic Releases Claude Mythos Preview System Card</strong></h3>
-    <p>The system card for Claude Mythos Preview is out with capability evaluations and safety test results, giving practitioners an actual document to reference when evaluating frontier models for enterprise deployment. If your team is comparing models for RAG or agent use cases, this is the required reading this week.</p>
-    <p class="meta"><a href="https://www-cdn.anthropic.com/53566bf5440a10affd749724787c8913a2ae0841.pdf">Anthropic / Hacker News</a> • Apr 7</p>
+    <h3>🔐 <strong>Cloudflare Sets 2029 Target for Full Post-Quantum Security</strong></h3>
+    <p>Cloudflare published a concrete post-quantum migration roadmap with 2029 as the full cutover date. If your data pipelines or API endpoints run over the public internet, this timeline should already be on your infrastructure planning radar.</p>
+    <p class="meta"><a href="https://blog.cloudflare.com/post-quantum-roadmap/">Cloudflare Blog / Hacker News</a> • Apr 7</p>
   </div>
 
   <div class="item">
-    <h3>🔒 <strong>Cloudflare Maps the Road to Post-Quantum by 2029</strong></h3>
-    <p>Cloudflare published a concrete roadmap to full post-quantum cryptography across its network by 2029, which touches every data pipeline transmitting anything over HTTPS. Not an emergency today, but if your data governance policy runs on a three-year horizon, add this to the backlog now rather than in 2028.</p>
-    <p class="meta"><a href="https://blog.cloudflare.com/post-quantum-roadmap/">Cloudflare Blog</a> • Apr 7</p>
+    <h3>📊 <strong>Stanford AI Index 2026 Drops April 13</strong></h3>
+    <p>The 2026 AI Index Report from Stanford HAI publishes in five days, and it remains the most credible annual benchmarking of AI progress across research, industry, and policy. Block time to read the data engineering and applied ML sections.</p>
+    <p class="meta"><a href="https://hai.stanford.edu/ai-index">Stanford HAI</a> • Apr 8</p>
   </div>
 
   <div class="item">
-    <h3>💻 <strong>Old Hacker Habits Keep AI-Generated Code Safer</strong></h3>
-    <p>A practical post argues that classic security hygiene, least privilege, sandboxing, and mandatory code review, maps directly onto managing LLM-generated code in data pipelines. Not revolutionary thinking, but a useful checklist for any team shipping AI-assisted ETL or transformation logic.</p>
-    <p class="meta"><a href="http://addxorrol.blogspot.com/2026/03/slightly-safer-vibecoding-by-adopting.html">addxorrol.blogspot.com</a> • Apr 3</p>
+    <h3>🧰 <strong>Slightly Safer Vibecoding by Adopting Old Hacker Habits</strong></h3>
+    <p>Practical security discipline adapted from classic hacker culture for teams using LLMs to generate pipeline and infrastructure code. If you are letting AI write Spark jobs or Terraform without reviewing the output carefully, this is a useful reality check.</p>
+    <p class="meta"><a href="http://addxorrol.blogspot.com/2026/03/slightly-safer-vibecoding-by-adopting.html">Hacker News</a> • Apr 3</p>
   </div>
 
   <div class="item">
-    <h3>🚨 <strong>Running Out of Disk Space on Launch Day: A Production War Story</strong></h3>
-    <p>A firsthand account of hitting disk limits at the worst possible moment, with concrete takeaways on log retention, temp file cleanup, and alerting thresholds. Every data engineer has this story; read someone else's version so yours never gets written.</p>
-    <p class="meta"><a href="https://alt-romes.github.io/posts/2026-04-01-running-out-of-disk-space-on-launch.html">alt-romes.github.io</a> • Apr 1</p>
+    <h3>📂 <strong>Git Commands Worth Running Before Reading Any Codebase</strong></h3>
+    <p>A tight practical reference for onboarding to an unfamiliar repository or auditing a data pipeline codebase quickly. Not revolutionary, but the kind of thing that saves a senior engineer 30 minutes the first time they touch a new repo.</p>
+    <p class="meta"><a href="https://piechowski.io/post/git-commands-before-reading-code/">Hacker News</a> • Apr 8</p>
   </div>
 
   <div class="item">
-    <h3>📋 <strong>International AI Safety Report 2026: The Full Scientific Consensus</strong></h3>
-    <p>The second International AI Safety Report compiles the current scientific consensus on general-purpose AI capabilities and risks, covering misuse vectors, systemic risks, and governance gaps across jurisdictions. Required reading if your organization is building an AI governance framework or responsible AI policy in 2026.</p>
-    <p class="meta"><a href="https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026">International AI Safety Report</a> • Apr 8</p>
+    <h3>🌐 <strong>LiveBench: Contamination-Free LLM Benchmark Leaderboard</strong></h3>
+    <p>LiveBench is a continuously refreshed, contamination-resistant LLM benchmark that has been a Spotlight Paper at ICLR 2025. If you are making model selection decisions for production data applications, this is a more trustworthy signal than most static leaderboards.</p>
+    <p class="meta"><a href="https://livebench.ai/">LiveBench / Web</a> • Apr 8</p>
   </div>
 
   <hr class="section-divider">
@@ -164,7 +164,7 @@
 
   <div class="item">
     <h3>🔧 <strong>Gemma 4 Multimodal Fine-Tuner for Apple Silicon</strong></h3>
-    <p>An open-source tool for fine-tuning Google's Gemma 4 multimodal model locally on Apple Silicon, cutting out cloud GPU costs and keeping proprietary training data off third-party infrastructure. Useful for data teams that need to fine-tune on sensitive data and cannot afford the governance headache of sending it to a cloud provider.</p>
+    <p>Open source tool for fine-tuning Google's Gemma 4 multimodal models on Apple Silicon without a GPU cluster. Lowers the barrier for data teams who want to run custom multimodal inference locally before committing to cloud GPU spend.</p>
     <p class="meta"><a href="https://github.com/mattmireles/gemma-tuner-multimodal">GitHub / Hacker News</a> • Apr 7</p>
   </div>
 
